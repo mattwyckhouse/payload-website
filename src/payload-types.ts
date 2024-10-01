@@ -32,7 +32,7 @@ export interface Config {
     'payload-migrations': PayloadMigration;
   };
   db: {
-    defaultIDType: string;
+    defaultIDType: number;
   };
   globals: {
     footer: Footer;
@@ -67,7 +67,7 @@ export interface UserAuthOperations {
  * via the `definition` "case-studies".
  */
 export interface CaseStudy {
-  id: string;
+  id: number;
   title: string;
   introContent: {
     root: {
@@ -86,7 +86,7 @@ export interface CaseStudy {
   };
   industry?: string | null;
   useCase?: string | null;
-  featuredImage: string | Media;
+  featuredImage: number | Media;
   layout?:
     | (
         | {
@@ -109,12 +109,12 @@ export interface CaseStudy {
                 };
                 [k: string]: unknown;
               };
-              logo: string | Media;
+              logo: number | Media;
               author?: string | null;
               role?: string | null;
               images?:
                 | {
-                    image: string | Media;
+                    image: number | Media;
                     id?: string | null;
                   }[]
                 | null;
@@ -155,15 +155,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
@@ -177,7 +177,7 @@ export interface CaseStudy {
             blockType: 'cta';
           }
         | {
-            cardGridFields: {
+            gridFields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -204,15 +204,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
@@ -232,15 +232,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                     };
@@ -275,7 +275,7 @@ export interface CaseStudy {
                       };
                       [k: string]: unknown;
                     };
-                    caseStudy: string | CaseStudy;
+                    caseStudy: number | CaseStudy;
                     id?: string | null;
                   }[]
                 | null;
@@ -304,7 +304,7 @@ export interface CaseStudy {
                 };
                 [k: string]: unknown;
               };
-              caseStudies: (string | CaseStudy)[];
+              caseStudies: (number | CaseStudy)[];
             };
             id?: string | null;
             blockName?: string | null;
@@ -319,15 +319,15 @@ export interface CaseStudy {
                 | {
                     quote: string;
                     author?: string | null;
-                    logo: string | Media;
+                    logo: number | Media;
                     images?:
                       | {
-                          image: string | Media;
+                          image: number | Media;
                           id?: string | null;
                         }[]
                       | null;
                     tabLabel: string;
-                    caseStudy: string | CaseStudy;
+                    caseStudy: number | CaseStudy;
                     id?: string | null;
                   }[]
                 | null;
@@ -367,15 +367,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
@@ -414,15 +414,15 @@ export interface CaseStudy {
                             reference?:
                               | ({
                                   relationTo: 'pages';
-                                  value: string | Page;
+                                  value: number | Page;
                                 } | null)
                               | ({
                                   relationTo: 'posts';
-                                  value: string | Post;
+                                  value: number | Post;
                                 } | null)
                               | ({
                                   relationTo: 'case-studies';
-                                  value: string | CaseStudy;
+                                  value: number | CaseStudy;
                                 } | null);
                             url?: string | null;
                             label: string;
@@ -540,15 +540,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
@@ -601,7 +601,7 @@ export interface CaseStudy {
                 };
                 [k: string]: unknown;
               };
-              form: string | Form;
+              form: number | Form;
             };
             id?: string | null;
             blockName?: string | null;
@@ -637,15 +637,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                     };
@@ -667,8 +667,8 @@ export interface CaseStudy {
                 | {
                     text: string;
                     media?: {
-                      top?: (string | null) | Media;
-                      bottom?: (string | null) | Media;
+                      top?: (number | null) | Media;
+                      bottom?: (number | null) | Media;
                     };
                     link?: {
                       type?: ('reference' | 'custom') | null;
@@ -676,15 +676,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                     };
@@ -698,15 +698,15 @@ export interface CaseStudy {
                 reference?:
                   | ({
                       relationTo: 'pages';
-                      value: string | Page;
+                      value: number | Page;
                     } | null)
                   | ({
                       relationTo: 'posts';
-                      value: string | Post;
+                      value: number | Post;
                     } | null)
                   | ({
                       relationTo: 'case-studies';
-                      value: string | CaseStudy;
+                      value: number | CaseStudy;
                     } | null);
                 url?: string | null;
                 label: string;
@@ -729,15 +729,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
@@ -777,22 +777,22 @@ export interface CaseStudy {
                 reference?:
                   | ({
                       relationTo: 'pages';
-                      value: string | Page;
+                      value: number | Page;
                     } | null)
                   | ({
                       relationTo: 'posts';
-                      value: string | Post;
+                      value: number | Post;
                     } | null)
                   | ({
                       relationTo: 'case-studies';
-                      value: string | CaseStudy;
+                      value: number | CaseStudy;
                     } | null);
                 url?: string | null;
                 label: string;
               };
               logos?:
                 | {
-                    logoMedia: string | Media;
+                    logoMedia: number | Media;
                     id?: string | null;
                   }[]
                 | null;
@@ -807,7 +807,7 @@ export interface CaseStudy {
                 theme?: ('light' | 'dark') | null;
               };
               position?: ('default' | 'wide') | null;
-              media: string | Media;
+              media: number | Media;
               caption?: {
                 root: {
                   type: string;
@@ -856,22 +856,22 @@ export interface CaseStudy {
                 reference?:
                   | ({
                       relationTo: 'pages';
-                      value: string | Page;
+                      value: number | Page;
                     } | null)
                   | ({
                       relationTo: 'posts';
-                      value: string | Post;
+                      value: number | Post;
                     } | null)
                   | ({
                       relationTo: 'case-studies';
-                      value: string | CaseStudy;
+                      value: number | CaseStudy;
                     } | null);
                 url?: string | null;
                 label: string;
               };
               images?:
                 | {
-                    image: string | Media;
+                    image: number | Media;
                     id?: string | null;
                   }[]
                 | null;
@@ -915,20 +915,20 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
                     };
-                    media: string | Media;
+                    media: number | Media;
                     id?: string | null;
                   }[]
                 | null;
@@ -957,15 +957,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
@@ -991,7 +991,7 @@ export interface CaseStudy {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
-              reusableContent: string | ReusableContent;
+              reusableContent: number | ReusableContent;
               customId?: string | null;
             };
             id?: string | null;
@@ -1043,15 +1043,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
@@ -1060,7 +1060,7 @@ export interface CaseStudy {
                   }[]
                 | null;
               assetType?: ('media' | 'code') | null;
-              media?: (string | null) | Media;
+              media?: (number | null) | Media;
               code?: string | null;
               mediaWidth?: ('small' | 'medium' | 'large' | 'full') | null;
               backgroundGlow?: ('none' | 'colorful' | 'white') | null;
@@ -1108,15 +1108,15 @@ export interface CaseStudy {
                                     reference?:
                                       | ({
                                           relationTo: 'pages';
-                                          value: string | Page;
+                                          value: number | Page;
                                         } | null)
                                       | ({
                                           relationTo: 'posts';
-                                          value: string | Post;
+                                          value: number | Post;
                                         } | null)
                                       | ({
                                           relationTo: 'case-studies';
-                                          value: string | CaseStudy;
+                                          value: number | CaseStudy;
                                         } | null);
                                     url?: string | null;
                                     label: string;
@@ -1155,15 +1155,15 @@ export interface CaseStudy {
                                           reference?:
                                             | ({
                                                 relationTo: 'pages';
-                                                value: string | Page;
+                                                value: number | Page;
                                               } | null)
                                             | ({
                                                 relationTo: 'posts';
-                                                value: string | Post;
+                                                value: number | Post;
                                               } | null)
                                             | ({
                                                 relationTo: 'case-studies';
-                                                value: string | CaseStudy;
+                                                value: number | CaseStudy;
                                               } | null);
                                           url?: string | null;
                                           label: string;
@@ -1263,8 +1263,8 @@ export interface CaseStudy {
                               | {
                                   text: string;
                                   media?: {
-                                    top?: (string | null) | Media;
-                                    bottom?: (string | null) | Media;
+                                    top?: (number | null) | Media;
+                                    bottom?: (number | null) | Media;
                                   };
                                   link?: {
                                     type?: ('reference' | 'custom') | null;
@@ -1272,15 +1272,15 @@ export interface CaseStudy {
                                     reference?:
                                       | ({
                                           relationTo: 'pages';
-                                          value: string | Page;
+                                          value: number | Page;
                                         } | null)
                                       | ({
                                           relationTo: 'posts';
-                                          value: string | Post;
+                                          value: number | Post;
                                         } | null)
                                       | ({
                                           relationTo: 'case-studies';
-                                          value: string | CaseStudy;
+                                          value: number | CaseStudy;
                                         } | null);
                                     url?: string | null;
                                   };
@@ -1294,15 +1294,15 @@ export interface CaseStudy {
                               reference?:
                                 | ({
                                     relationTo: 'pages';
-                                    value: string | Page;
+                                    value: number | Page;
                                   } | null)
                                 | ({
                                     relationTo: 'posts';
-                                    value: string | Post;
+                                    value: number | Post;
                                   } | null)
                                 | ({
                                     relationTo: 'case-studies';
-                                    value: string | CaseStudy;
+                                    value: number | CaseStudy;
                                   } | null);
                               url?: string | null;
                               label: string;
@@ -1341,15 +1341,15 @@ export interface CaseStudy {
                                     reference?:
                                       | ({
                                           relationTo: 'pages';
-                                          value: string | Page;
+                                          value: number | Page;
                                         } | null)
                                       | ({
                                           relationTo: 'posts';
-                                          value: string | Post;
+                                          value: number | Post;
                                         } | null)
                                       | ({
                                           relationTo: 'case-studies';
-                                          value: string | CaseStudy;
+                                          value: number | CaseStudy;
                                         } | null);
                                     url?: string | null;
                                     label: string;
@@ -1382,15 +1382,15 @@ export interface CaseStudy {
                                           reference?:
                                             | ({
                                                 relationTo: 'pages';
-                                                value: string | Page;
+                                                value: number | Page;
                                               } | null)
                                             | ({
                                                 relationTo: 'posts';
-                                                value: string | Post;
+                                                value: number | Post;
                                               } | null)
                                             | ({
                                                 relationTo: 'case-studies';
-                                                value: string | CaseStudy;
+                                                value: number | CaseStudy;
                                               } | null);
                                           url?: string | null;
                                           label: string;
@@ -1398,7 +1398,7 @@ export interface CaseStudy {
                                         id?: string | null;
                                       }[]
                                     | null;
-                                  media?: (string | null) | Media;
+                                  media?: (number | null) | Media;
                                   id?: string | null;
                                 }[]
                               | null;
@@ -1445,15 +1445,15 @@ export interface CaseStudy {
                       reference?:
                         | ({
                             relationTo: 'pages';
-                            value: string | Page;
+                            value: number | Page;
                           } | null)
                         | ({
                             relationTo: 'posts';
-                            value: string | Post;
+                            value: number | Post;
                           } | null)
                         | ({
                             relationTo: 'case-studies';
-                            value: string | CaseStudy;
+                            value: number | CaseStudy;
                           } | null);
                       url?: string | null;
                       label: string;
@@ -1486,15 +1486,15 @@ export interface CaseStudy {
                             reference?:
                               | ({
                                   relationTo: 'pages';
-                                  value: string | Page;
+                                  value: number | Page;
                                 } | null)
                               | ({
                                   relationTo: 'posts';
-                                  value: string | Post;
+                                  value: number | Post;
                                 } | null)
                               | ({
                                   relationTo: 'case-studies';
-                                  value: string | CaseStudy;
+                                  value: number | CaseStudy;
                                 } | null);
                             url?: string | null;
                             label: string;
@@ -1502,7 +1502,7 @@ export interface CaseStudy {
                           id?: string | null;
                         }[]
                       | null;
-                    media?: (string | null) | Media;
+                    media?: (number | null) | Media;
                     id?: string | null;
                   }[]
                 | null;
@@ -1519,7 +1519,7 @@ export interface CaseStudy {
   meta?: {
     title?: string | null;
     description?: string | null;
-    image?: (string | null) | Media;
+    image?: (number | null) | Media;
   };
   updatedAt: string;
   createdAt: string;
@@ -1530,9 +1530,9 @@ export interface CaseStudy {
  * via the `definition` "media".
  */
 export interface Media {
-  id: string;
+  id: number;
   alt: string;
-  darkModeFallback?: (string | null) | Media;
+  darkModeFallback?: (number | null) | Media;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -1550,7 +1550,7 @@ export interface Media {
  * via the `definition` "pages".
  */
 export interface Page {
-  id: string;
+  id: number;
   title: string;
   fullTitle?: string | null;
   hero: {
@@ -1566,15 +1566,15 @@ export interface Page {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
@@ -1605,7 +1605,7 @@ export interface Page {
         | {
             name?: string | null;
             link?: string | null;
-            image?: (string | null) | Media;
+            image?: (number | null) | Media;
             id?: string | null;
           }[]
         | null;
@@ -1617,15 +1617,15 @@ export interface Page {
       reference?:
         | ({
             relationTo: 'pages';
-            value: string | Page;
+            value: number | Page;
           } | null)
         | ({
             relationTo: 'posts';
-            value: string | Post;
+            value: number | Post;
           } | null)
         | ({
             relationTo: 'case-studies';
-            value: string | CaseStudy;
+            value: number | CaseStudy;
           } | null);
       url?: string | null;
       label: string;
@@ -1668,15 +1668,15 @@ export interface Page {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
@@ -1722,15 +1722,15 @@ export interface Page {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
@@ -1753,15 +1753,15 @@ export interface Page {
                 reference?:
                   | ({
                       relationTo: 'pages';
-                      value: string | Page;
+                      value: number | Page;
                     } | null)
                   | ({
                       relationTo: 'posts';
-                      value: string | Post;
+                      value: number | Post;
                     } | null)
                   | ({
                       relationTo: 'case-studies';
-                      value: string | CaseStudy;
+                      value: number | CaseStudy;
                     } | null);
                 url?: string | null;
                 label: string;
@@ -1787,15 +1787,15 @@ export interface Page {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
@@ -1805,17 +1805,17 @@ export interface Page {
       | null;
     images?:
       | {
-          image: string | Media;
+          image: number | Media;
           id?: string | null;
         }[]
       | null;
-    media?: (string | null) | Media;
-    secondaryMedia?: (string | null) | Media;
-    featureVideo?: (string | null) | Media;
-    form?: (string | null) | Form;
+    media?: (number | null) | Media;
+    secondaryMedia?: (number | null) | Media;
+    featureVideo?: (number | null) | Media;
+    form?: (number | null) | Form;
     logos?:
       | {
-          logoMedia: string | Media;
+          logoMedia: number | Media;
           id?: string | null;
         }[]
       | null;
@@ -1841,12 +1841,12 @@ export interface Page {
             };
             [k: string]: unknown;
           };
-          logo: string | Media;
+          logo: number | Media;
           author?: string | null;
           role?: string | null;
           images?:
             | {
-                image: string | Media;
+                image: number | Media;
                 id?: string | null;
               }[]
             | null;
@@ -1887,15 +1887,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -1909,7 +1909,7 @@ export interface Page {
         blockType: 'cta';
       }
     | {
-        cardGridFields: {
+        gridFields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -1936,15 +1936,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -1964,15 +1964,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                 };
@@ -2007,7 +2007,7 @@ export interface Page {
                   };
                   [k: string]: unknown;
                 };
-                caseStudy: string | CaseStudy;
+                caseStudy: number | CaseStudy;
                 id?: string | null;
               }[]
             | null;
@@ -2036,7 +2036,7 @@ export interface Page {
             };
             [k: string]: unknown;
           };
-          caseStudies: (string | CaseStudy)[];
+          caseStudies: (number | CaseStudy)[];
         };
         id?: string | null;
         blockName?: string | null;
@@ -2051,15 +2051,15 @@ export interface Page {
             | {
                 quote: string;
                 author?: string | null;
-                logo: string | Media;
+                logo: number | Media;
                 images?:
                   | {
-                      image: string | Media;
+                      image: number | Media;
                       id?: string | null;
                     }[]
                   | null;
                 tabLabel: string;
-                caseStudy: string | CaseStudy;
+                caseStudy: number | CaseStudy;
                 id?: string | null;
               }[]
             | null;
@@ -2099,15 +2099,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -2146,15 +2146,15 @@ export interface Page {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -2272,15 +2272,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -2333,7 +2333,7 @@ export interface Page {
             };
             [k: string]: unknown;
           };
-          form: string | Form;
+          form: number | Form;
         };
         id?: string | null;
         blockName?: string | null;
@@ -2369,15 +2369,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                 };
@@ -2399,8 +2399,8 @@ export interface Page {
             | {
                 text: string;
                 media?: {
-                  top?: (string | null) | Media;
-                  bottom?: (string | null) | Media;
+                  top?: (number | null) | Media;
+                  bottom?: (number | null) | Media;
                 };
                 link?: {
                   type?: ('reference' | 'custom') | null;
@@ -2408,15 +2408,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                 };
@@ -2430,15 +2430,15 @@ export interface Page {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
@@ -2461,15 +2461,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -2509,22 +2509,22 @@ export interface Page {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
           };
           logos?:
             | {
-                logoMedia: string | Media;
+                logoMedia: number | Media;
                 id?: string | null;
               }[]
             | null;
@@ -2539,7 +2539,7 @@ export interface Page {
             theme?: ('light' | 'dark') | null;
           };
           position?: ('default' | 'wide') | null;
-          media: string | Media;
+          media: number | Media;
           caption?: {
             root: {
               type: string;
@@ -2588,22 +2588,22 @@ export interface Page {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
           };
           images?:
             | {
-                image: string | Media;
+                image: number | Media;
                 id?: string | null;
               }[]
             | null;
@@ -2647,20 +2647,20 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
                 };
-                media: string | Media;
+                media: number | Media;
                 id?: string | null;
               }[]
             | null;
@@ -2689,15 +2689,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -2723,7 +2723,7 @@ export interface Page {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
-          reusableContent: string | ReusableContent;
+          reusableContent: number | ReusableContent;
           customId?: string | null;
         };
         id?: string | null;
@@ -2775,15 +2775,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -2792,7 +2792,7 @@ export interface Page {
               }[]
             | null;
           assetType?: ('media' | 'code') | null;
-          media?: (string | null) | Media;
+          media?: (number | null) | Media;
           code?: string | null;
           mediaWidth?: ('small' | 'medium' | 'large' | 'full') | null;
           backgroundGlow?: ('none' | 'colorful' | 'white') | null;
@@ -2840,15 +2840,15 @@ export interface Page {
                                 reference?:
                                   | ({
                                       relationTo: 'pages';
-                                      value: string | Page;
+                                      value: number | Page;
                                     } | null)
                                   | ({
                                       relationTo: 'posts';
-                                      value: string | Post;
+                                      value: number | Post;
                                     } | null)
                                   | ({
                                       relationTo: 'case-studies';
-                                      value: string | CaseStudy;
+                                      value: number | CaseStudy;
                                     } | null);
                                 url?: string | null;
                                 label: string;
@@ -2887,15 +2887,15 @@ export interface Page {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                       label: string;
@@ -2995,8 +2995,8 @@ export interface Page {
                           | {
                               text: string;
                               media?: {
-                                top?: (string | null) | Media;
-                                bottom?: (string | null) | Media;
+                                top?: (number | null) | Media;
+                                bottom?: (number | null) | Media;
                               };
                               link?: {
                                 type?: ('reference' | 'custom') | null;
@@ -3004,15 +3004,15 @@ export interface Page {
                                 reference?:
                                   | ({
                                       relationTo: 'pages';
-                                      value: string | Page;
+                                      value: number | Page;
                                     } | null)
                                   | ({
                                       relationTo: 'posts';
-                                      value: string | Post;
+                                      value: number | Post;
                                     } | null)
                                   | ({
                                       relationTo: 'case-studies';
-                                      value: string | CaseStudy;
+                                      value: number | CaseStudy;
                                     } | null);
                                 url?: string | null;
                               };
@@ -3026,15 +3026,15 @@ export interface Page {
                           reference?:
                             | ({
                                 relationTo: 'pages';
-                                value: string | Page;
+                                value: number | Page;
                               } | null)
                             | ({
                                 relationTo: 'posts';
-                                value: string | Post;
+                                value: number | Post;
                               } | null)
                             | ({
                                 relationTo: 'case-studies';
-                                value: string | CaseStudy;
+                                value: number | CaseStudy;
                               } | null);
                           url?: string | null;
                           label: string;
@@ -3073,15 +3073,15 @@ export interface Page {
                                 reference?:
                                   | ({
                                       relationTo: 'pages';
-                                      value: string | Page;
+                                      value: number | Page;
                                     } | null)
                                   | ({
                                       relationTo: 'posts';
-                                      value: string | Post;
+                                      value: number | Post;
                                     } | null)
                                   | ({
                                       relationTo: 'case-studies';
-                                      value: string | CaseStudy;
+                                      value: number | CaseStudy;
                                     } | null);
                                 url?: string | null;
                                 label: string;
@@ -3114,15 +3114,15 @@ export interface Page {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                       label: string;
@@ -3130,7 +3130,7 @@ export interface Page {
                                     id?: string | null;
                                   }[]
                                 | null;
-                              media?: (string | null) | Media;
+                              media?: (number | null) | Media;
                               id?: string | null;
                             }[]
                           | null;
@@ -3177,15 +3177,15 @@ export interface Page {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -3218,15 +3218,15 @@ export interface Page {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -3234,7 +3234,7 @@ export interface Page {
                       id?: string | null;
                     }[]
                   | null;
-                media?: (string | null) | Media;
+                media?: (number | null) | Media;
                 id?: string | null;
               }[]
             | null;
@@ -3249,12 +3249,12 @@ export interface Page {
   meta?: {
     title?: string | null;
     description?: string | null;
-    image?: (string | null) | Media;
+    image?: (number | null) | Media;
   };
-  parent?: (string | null) | Page;
+  parent?: (number | null) | Page;
   breadcrumbs?:
     | {
-        doc?: (string | null) | Page;
+        doc?: (number | null) | Page;
         url?: string | null;
         label?: string | null;
         id?: string | null;
@@ -3269,9 +3269,9 @@ export interface Page {
  * via the `definition` "posts".
  */
 export interface Post {
-  id: string;
+  id: number;
   title: string;
-  image: string | Media;
+  image: number | Media;
   excerpt: {
     root: {
       type: string;
@@ -3373,15 +3373,15 @@ export interface Post {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -3411,7 +3411,7 @@ export interface Post {
             theme?: ('light' | 'dark') | null;
           };
           position?: ('default' | 'wide') | null;
-          media: string | Media;
+          media: number | Media;
           caption?: {
             root: {
               type: string;
@@ -3437,7 +3437,7 @@ export interface Post {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
-          reusableContent: string | ReusableContent;
+          reusableContent: number | ReusableContent;
           customId?: string | null;
         };
         id?: string | null;
@@ -3460,14 +3460,14 @@ export interface Post {
     };
     [k: string]: unknown;
   } | null;
-  relatedPosts?: (string | Post)[] | null;
+  relatedPosts?: (number | Post)[] | null;
   slug?: string | null;
-  authors: (string | User)[];
+  authors: (number | User)[];
   publishedOn: string;
   meta?: {
     title?: string | null;
     description?: string | null;
-    image?: (string | null) | Media;
+    image?: (number | null) | Media;
   };
   updatedAt: string;
   createdAt: string;
@@ -3478,7 +3478,7 @@ export interface Post {
  * via the `definition` "reusable-content".
  */
 export interface ReusableContent {
-  id: string;
+  id: number;
   title: string;
   layout: (
     | {
@@ -3564,12 +3564,12 @@ export interface ReusableContent {
             };
             [k: string]: unknown;
           };
-          logo: string | Media;
+          logo: number | Media;
           author?: string | null;
           role?: string | null;
           images?:
             | {
-                image: string | Media;
+                image: number | Media;
                 id?: string | null;
               }[]
             | null;
@@ -3610,15 +3610,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -3632,7 +3632,7 @@ export interface ReusableContent {
         blockType: 'cta';
       }
     | {
-        cardGridFields: {
+        gridFields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3659,15 +3659,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -3687,15 +3687,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                 };
@@ -3730,7 +3730,7 @@ export interface ReusableContent {
                   };
                   [k: string]: unknown;
                 };
-                caseStudy: string | CaseStudy;
+                caseStudy: number | CaseStudy;
                 id?: string | null;
               }[]
             | null;
@@ -3759,7 +3759,7 @@ export interface ReusableContent {
             };
             [k: string]: unknown;
           };
-          caseStudies: (string | CaseStudy)[];
+          caseStudies: (number | CaseStudy)[];
         };
         id?: string | null;
         blockName?: string | null;
@@ -3774,15 +3774,15 @@ export interface ReusableContent {
             | {
                 quote: string;
                 author?: string | null;
-                logo: string | Media;
+                logo: number | Media;
                 images?:
                   | {
-                      image: string | Media;
+                      image: number | Media;
                       id?: string | null;
                     }[]
                   | null;
                 tabLabel: string;
-                caseStudy: string | CaseStudy;
+                caseStudy: number | CaseStudy;
                 id?: string | null;
               }[]
             | null;
@@ -3824,15 +3824,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -3876,15 +3876,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -3923,15 +3923,15 @@ export interface ReusableContent {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -4049,15 +4049,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -4111,7 +4111,7 @@ export interface ReusableContent {
             };
             [k: string]: unknown;
           };
-          form: string | Form;
+          form: number | Form;
         };
         id?: string | null;
         blockName?: string | null;
@@ -4147,15 +4147,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                 };
@@ -4177,8 +4177,8 @@ export interface ReusableContent {
             | {
                 text: string;
                 media?: {
-                  top?: (string | null) | Media;
-                  bottom?: (string | null) | Media;
+                  top?: (number | null) | Media;
+                  bottom?: (number | null) | Media;
                 };
                 link?: {
                   type?: ('reference' | 'custom') | null;
@@ -4186,15 +4186,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                 };
@@ -4208,15 +4208,15 @@ export interface ReusableContent {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
@@ -4239,15 +4239,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -4287,22 +4287,22 @@ export interface ReusableContent {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
           };
           logos?:
             | {
-                logoMedia: string | Media;
+                logoMedia: number | Media;
                 id?: string | null;
               }[]
             | null;
@@ -4317,7 +4317,7 @@ export interface ReusableContent {
             theme?: ('light' | 'dark') | null;
           };
           position?: ('default' | 'wide') | null;
-          media: string | Media;
+          media: number | Media;
           caption?: {
             root: {
               type: string;
@@ -4366,22 +4366,22 @@ export interface ReusableContent {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
           };
           images?:
             | {
-                image: string | Media;
+                image: number | Media;
                 id?: string | null;
               }[]
             | null;
@@ -4425,20 +4425,20 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
                 };
-                media: string | Media;
+                media: number | Media;
                 id?: string | null;
               }[]
             | null;
@@ -4467,15 +4467,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -4541,15 +4541,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -4558,7 +4558,7 @@ export interface ReusableContent {
               }[]
             | null;
           assetType?: ('media' | 'code') | null;
-          media?: (string | null) | Media;
+          media?: (number | null) | Media;
           code?: string | null;
           mediaWidth?: ('small' | 'medium' | 'large' | 'full') | null;
           backgroundGlow?: ('none' | 'colorful' | 'white') | null;
@@ -4606,15 +4606,15 @@ export interface ReusableContent {
                                 reference?:
                                   | ({
                                       relationTo: 'pages';
-                                      value: string | Page;
+                                      value: number | Page;
                                     } | null)
                                   | ({
                                       relationTo: 'posts';
-                                      value: string | Post;
+                                      value: number | Post;
                                     } | null)
                                   | ({
                                       relationTo: 'case-studies';
-                                      value: string | CaseStudy;
+                                      value: number | CaseStudy;
                                     } | null);
                                 url?: string | null;
                                 label: string;
@@ -4653,15 +4653,15 @@ export interface ReusableContent {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                       label: string;
@@ -4761,8 +4761,8 @@ export interface ReusableContent {
                           | {
                               text: string;
                               media?: {
-                                top?: (string | null) | Media;
-                                bottom?: (string | null) | Media;
+                                top?: (number | null) | Media;
+                                bottom?: (number | null) | Media;
                               };
                               link?: {
                                 type?: ('reference' | 'custom') | null;
@@ -4770,15 +4770,15 @@ export interface ReusableContent {
                                 reference?:
                                   | ({
                                       relationTo: 'pages';
-                                      value: string | Page;
+                                      value: number | Page;
                                     } | null)
                                   | ({
                                       relationTo: 'posts';
-                                      value: string | Post;
+                                      value: number | Post;
                                     } | null)
                                   | ({
                                       relationTo: 'case-studies';
-                                      value: string | CaseStudy;
+                                      value: number | CaseStudy;
                                     } | null);
                                 url?: string | null;
                               };
@@ -4792,15 +4792,15 @@ export interface ReusableContent {
                           reference?:
                             | ({
                                 relationTo: 'pages';
-                                value: string | Page;
+                                value: number | Page;
                               } | null)
                             | ({
                                 relationTo: 'posts';
-                                value: string | Post;
+                                value: number | Post;
                               } | null)
                             | ({
                                 relationTo: 'case-studies';
-                                value: string | CaseStudy;
+                                value: number | CaseStudy;
                               } | null);
                           url?: string | null;
                           label: string;
@@ -4839,15 +4839,15 @@ export interface ReusableContent {
                                 reference?:
                                   | ({
                                       relationTo: 'pages';
-                                      value: string | Page;
+                                      value: number | Page;
                                     } | null)
                                   | ({
                                       relationTo: 'posts';
-                                      value: string | Post;
+                                      value: number | Post;
                                     } | null)
                                   | ({
                                       relationTo: 'case-studies';
-                                      value: string | CaseStudy;
+                                      value: number | CaseStudy;
                                     } | null);
                                 url?: string | null;
                                 label: string;
@@ -4880,15 +4880,15 @@ export interface ReusableContent {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                       label: string;
@@ -4896,7 +4896,7 @@ export interface ReusableContent {
                                     id?: string | null;
                                   }[]
                                 | null;
-                              media?: (string | null) | Media;
+                              media?: (number | null) | Media;
                               id?: string | null;
                             }[]
                           | null;
@@ -4943,15 +4943,15 @@ export interface ReusableContent {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -4984,15 +4984,15 @@ export interface ReusableContent {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -5000,7 +5000,7 @@ export interface ReusableContent {
                       id?: string | null;
                     }[]
                   | null;
-                media?: (string | null) | Media;
+                media?: (number | null) | Media;
                 id?: string | null;
               }[]
             | null;
@@ -5072,7 +5072,7 @@ export interface CodeExampleBlock {
  * via the `definition` "MediaExampleBlock".
  */
 export interface MediaExampleBlock {
-  media: string | Media;
+  media: number | Media;
   id?: string | null;
   blockName?: string | null;
   blockType: 'MediaExampleBlock';
@@ -5082,7 +5082,7 @@ export interface MediaExampleBlock {
  * via the `definition` "forms".
  */
 export interface Form {
-  id: string;
+  id: number;
   title: string;
   fields?:
     | (
@@ -5247,11 +5247,11 @@ export interface Form {
  * via the `definition` "users".
  */
 export interface User {
-  id: string;
+  id: number;
   firstName: string;
   lastName: string;
   twitter?: string | null;
-  photo?: (string | null) | Media;
+  photo?: (number | null) | Media;
   roles: ('admin' | 'public')[];
   updatedAt: string;
   createdAt: string;
@@ -5269,7 +5269,7 @@ export interface User {
  * via the `definition` "community-help".
  */
 export interface CommunityHelp {
-  id: string;
+  id: number;
   title?: string | null;
   communityHelpType?: ('discord' | 'github') | null;
   githubID?: string | null;
@@ -5286,7 +5286,7 @@ export interface CommunityHelp {
   introDescription?: string | null;
   slug?: string | null;
   helpful?: boolean | null;
-  relatedDocs?: (string | Doc)[] | null;
+  relatedDocs?: (number | Doc)[] | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -5295,7 +5295,7 @@ export interface CommunityHelp {
  * via the `definition` "docs".
  */
 export interface Doc {
-  id: string;
+  id: number;
   title: string;
   description?: string | null;
   keywords?: string | null;
@@ -5322,7 +5322,7 @@ export interface Doc {
  * via the `definition` "industries".
  */
 export interface Industry {
-  id: string;
+  id: number;
   name: string;
   value: string;
   updatedAt: string;
@@ -5333,7 +5333,7 @@ export interface Industry {
  * via the `definition` "specialties".
  */
 export interface Specialty {
-  id: string;
+  id: number;
   name: string;
   value: string;
   updatedAt: string;
@@ -5344,7 +5344,7 @@ export interface Specialty {
  * via the `definition` "regions".
  */
 export interface Region {
-  id: string;
+  id: number;
   name: string;
   value: string;
   updatedAt: string;
@@ -5355,7 +5355,7 @@ export interface Region {
  * via the `definition` "budgets".
  */
 export interface Budget {
-  id: string;
+  id: number;
   name: string;
   value: string;
   updatedAt: string;
@@ -5366,18 +5366,18 @@ export interface Budget {
  * via the `definition` "partners".
  */
 export interface Partner {
-  id: string;
+  id: number;
   name: string;
   website: string;
   email: string;
   slug: string;
   agency_status?: ('active' | 'inactive') | null;
   hubspotID?: string | null;
-  logo: string | Media;
+  logo: number | Media;
   featured?: boolean | null;
   topContributor?: boolean | null;
   content: {
-    bannerImage: string | Media;
+    bannerImage: number | Media;
     overview: {
       root: {
         type: string;
@@ -5423,7 +5423,7 @@ export interface Partner {
       };
       [k: string]: unknown;
     };
-    caseStudy?: (string | null) | CaseStudy;
+    caseStudy?: (number | null) | CaseStudy;
     contributions?:
       | {
           type: 'discussion' | 'pr' | 'issue';
@@ -5442,10 +5442,10 @@ export interface Partner {
       | null;
   };
   city: string;
-  regions: (string | Region)[];
-  specialties: (string | Specialty)[];
-  budgets: (string | Budget)[];
-  industries: (string | Industry)[];
+  regions: (number | Region)[];
+  specialties: (number | Specialty)[];
+  budgets: (number | Budget)[];
+  industries: (number | Industry)[];
   social?:
     | {
         platform: 'linkedin' | 'twitter' | 'facebook' | 'instagram' | 'youtube' | 'github';
@@ -5462,8 +5462,8 @@ export interface Partner {
  * via the `definition` "form-submissions".
  */
 export interface FormSubmission {
-  id: string;
-  form: string | Form;
+  id: number;
+  form: number | Form;
   submissionData?:
     | {
         field: string;
@@ -5479,22 +5479,22 @@ export interface FormSubmission {
  * via the `definition` "redirects".
  */
 export interface Redirect {
-  id: string;
+  id: number;
   from: string;
   to?: {
     type?: ('reference' | 'custom') | null;
     reference?:
       | ({
           relationTo: 'case-studies';
-          value: string | CaseStudy;
+          value: number | CaseStudy;
         } | null)
       | ({
           relationTo: 'pages';
-          value: string | Page;
+          value: number | Page;
         } | null)
       | ({
           relationTo: 'posts';
-          value: string | Post;
+          value: number | Post;
         } | null);
     url?: string | null;
   };
@@ -5506,76 +5506,76 @@ export interface Redirect {
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
-  id: string;
+  id: number;
   document?:
     | ({
         relationTo: 'case-studies';
-        value: string | CaseStudy;
+        value: number | CaseStudy;
       } | null)
     | ({
         relationTo: 'community-help';
-        value: string | CommunityHelp;
+        value: number | CommunityHelp;
       } | null)
     | ({
         relationTo: 'docs';
-        value: string | Doc;
+        value: number | Doc;
       } | null)
     | ({
         relationTo: 'media';
-        value: string | Media;
+        value: number | Media;
       } | null)
     | ({
         relationTo: 'pages';
-        value: string | Page;
+        value: number | Page;
       } | null)
     | ({
         relationTo: 'industries';
-        value: string | Industry;
+        value: number | Industry;
       } | null)
     | ({
         relationTo: 'specialties';
-        value: string | Specialty;
+        value: number | Specialty;
       } | null)
     | ({
         relationTo: 'regions';
-        value: string | Region;
+        value: number | Region;
       } | null)
     | ({
         relationTo: 'budgets';
-        value: string | Budget;
+        value: number | Budget;
       } | null)
     | ({
         relationTo: 'posts';
-        value: string | Post;
+        value: number | Post;
       } | null)
     | ({
         relationTo: 'reusable-content';
-        value: string | ReusableContent;
+        value: number | ReusableContent;
       } | null)
     | ({
         relationTo: 'users';
-        value: string | User;
+        value: number | User;
       } | null)
     | ({
         relationTo: 'partners';
-        value: string | Partner;
+        value: number | Partner;
       } | null)
     | ({
         relationTo: 'forms';
-        value: string | Form;
+        value: number | Form;
       } | null)
     | ({
         relationTo: 'form-submissions';
-        value: string | FormSubmission;
+        value: number | FormSubmission;
       } | null)
     | ({
         relationTo: 'redirects';
-        value: string | Redirect;
+        value: number | Redirect;
       } | null);
   globalSlug?: string | null;
   user: {
     relationTo: 'users';
-    value: string | User;
+    value: number | User;
   };
   updatedAt: string;
   createdAt: string;
@@ -5585,10 +5585,10 @@ export interface PayloadLockedDocument {
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
-  id: string;
+  id: number;
   user: {
     relationTo: 'users';
-    value: string | User;
+    value: number | User;
   };
   key?: string | null;
   value?:
@@ -5608,7 +5608,7 @@ export interface PayloadPreference {
  * via the `definition` "payload-migrations".
  */
 export interface PayloadMigration {
-  id: string;
+  id: number;
   name?: string | null;
   batch?: number | null;
   updatedAt: string;
@@ -5619,7 +5619,7 @@ export interface PayloadMigration {
  * via the `definition` "footer".
  */
 export interface Footer {
-  id: string;
+  id: number;
   columns?:
     | {
         label: string;
@@ -5631,15 +5631,15 @@ export interface Footer {
                 reference?:
                   | ({
                       relationTo: 'pages';
-                      value: string | Page;
+                      value: number | Page;
                     } | null)
                   | ({
                       relationTo: 'posts';
-                      value: string | Post;
+                      value: number | Post;
                     } | null)
                   | ({
                       relationTo: 'case-studies';
-                      value: string | CaseStudy;
+                      value: number | CaseStudy;
                     } | null);
                 url?: string | null;
                 label: string;
@@ -5658,7 +5658,7 @@ export interface Footer {
  * via the `definition` "main-menu".
  */
 export interface MainMenu {
-  id: string;
+  id: number;
   tabs?:
     | {
         label: string;
@@ -5670,15 +5670,15 @@ export interface MainMenu {
           reference?:
             | ({
                 relationTo: 'pages';
-                value: string | Page;
+                value: number | Page;
               } | null)
             | ({
                 relationTo: 'posts';
-                value: string | Post;
+                value: number | Post;
               } | null)
             | ({
                 relationTo: 'case-studies';
-                value: string | CaseStudy;
+                value: number | CaseStudy;
               } | null);
           url?: string | null;
         };
@@ -5691,15 +5691,15 @@ export interface MainMenu {
                 reference?:
                   | ({
                       relationTo: 'pages';
-                      value: string | Page;
+                      value: number | Page;
                     } | null)
                   | ({
                       relationTo: 'posts';
-                      value: string | Post;
+                      value: number | Post;
                     } | null)
                   | ({
                       relationTo: 'case-studies';
-                      value: string | CaseStudy;
+                      value: number | CaseStudy;
                     } | null);
                 url?: string | null;
                 label: string;
@@ -5717,15 +5717,15 @@ export interface MainMenu {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -5757,15 +5757,15 @@ export interface MainMenu {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -5784,15 +5784,15 @@ export interface MainMenu {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -5815,8 +5815,8 @@ export interface MainMenu {
  * via the `definition` "partner-program".
  */
 export interface PartnerProgram {
-  id: string;
-  contactForm: string | Form;
+  id: number;
+  contactForm: number | Form;
   hero?: {
     richText?: {
       root: {
@@ -5841,15 +5841,15 @@ export interface PartnerProgram {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
@@ -5865,15 +5865,15 @@ export interface PartnerProgram {
             reference?:
               | ({
                   relationTo: 'pages';
-                  value: string | Page;
+                  value: number | Page;
                 } | null)
               | ({
                   relationTo: 'posts';
-                  value: string | Post;
+                  value: number | Post;
                 } | null)
               | ({
                   relationTo: 'case-studies';
-                  value: string | CaseStudy;
+                  value: number | CaseStudy;
                 } | null);
             url?: string | null;
             label: string;
@@ -5884,7 +5884,7 @@ export interface PartnerProgram {
   };
   featuredPartners: {
     description?: string | null;
-    partners: (string | Partner)[];
+    partners: (number | Partner)[];
   };
   contentBlocks?: {
     beforeDirectory?:
@@ -5909,12 +5909,12 @@ export interface PartnerProgram {
                   };
                   [k: string]: unknown;
                 };
-                logo: string | Media;
+                logo: number | Media;
                 author?: string | null;
                 role?: string | null;
                 images?:
                   | {
-                      image: string | Media;
+                      image: number | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -5955,15 +5955,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -5977,7 +5977,7 @@ export interface PartnerProgram {
               blockType: 'cta';
             }
           | {
-              cardGridFields: {
+              gridFields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6004,15 +6004,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -6032,15 +6032,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                       };
@@ -6075,7 +6075,7 @@ export interface PartnerProgram {
                         };
                         [k: string]: unknown;
                       };
-                      caseStudy: string | CaseStudy;
+                      caseStudy: number | CaseStudy;
                       id?: string | null;
                     }[]
                   | null;
@@ -6104,7 +6104,7 @@ export interface PartnerProgram {
                   };
                   [k: string]: unknown;
                 };
-                caseStudies: (string | CaseStudy)[];
+                caseStudies: (number | CaseStudy)[];
               };
               id?: string | null;
               blockName?: string | null;
@@ -6119,15 +6119,15 @@ export interface PartnerProgram {
                   | {
                       quote: string;
                       author?: string | null;
-                      logo: string | Media;
+                      logo: number | Media;
                       images?:
                         | {
-                            image: string | Media;
+                            image: number | Media;
                             id?: string | null;
                           }[]
                         | null;
                       tabLabel: string;
-                      caseStudy: string | CaseStudy;
+                      caseStudy: number | CaseStudy;
                       id?: string | null;
                     }[]
                   | null;
@@ -6167,15 +6167,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -6214,15 +6214,15 @@ export interface PartnerProgram {
                               reference?:
                                 | ({
                                     relationTo: 'pages';
-                                    value: string | Page;
+                                    value: number | Page;
                                   } | null)
                                 | ({
                                     relationTo: 'posts';
-                                    value: string | Post;
+                                    value: number | Post;
                                   } | null)
                                 | ({
                                     relationTo: 'case-studies';
-                                    value: string | CaseStudy;
+                                    value: number | CaseStudy;
                                   } | null);
                               url?: string | null;
                               label: string;
@@ -6340,15 +6340,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -6401,7 +6401,7 @@ export interface PartnerProgram {
                   };
                   [k: string]: unknown;
                 };
-                form: string | Form;
+                form: number | Form;
               };
               id?: string | null;
               blockName?: string | null;
@@ -6437,15 +6437,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                       };
@@ -6467,8 +6467,8 @@ export interface PartnerProgram {
                   | {
                       text: string;
                       media?: {
-                        top?: (string | null) | Media;
-                        bottom?: (string | null) | Media;
+                        top?: (number | null) | Media;
+                        bottom?: (number | null) | Media;
                       };
                       link?: {
                         type?: ('reference' | 'custom') | null;
@@ -6476,15 +6476,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                       };
@@ -6498,15 +6498,15 @@ export interface PartnerProgram {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -6529,15 +6529,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -6577,22 +6577,22 @@ export interface PartnerProgram {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
                 };
                 logos?:
                   | {
-                      logoMedia: string | Media;
+                      logoMedia: number | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -6607,7 +6607,7 @@ export interface PartnerProgram {
                   theme?: ('light' | 'dark') | null;
                 };
                 position?: ('default' | 'wide') | null;
-                media: string | Media;
+                media: number | Media;
                 caption?: {
                   root: {
                     type: string;
@@ -6656,22 +6656,22 @@ export interface PartnerProgram {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
                 };
                 images?:
                   | {
-                      image: string | Media;
+                      image: number | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -6715,20 +6715,20 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
                       };
-                      media: string | Media;
+                      media: number | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -6757,15 +6757,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -6791,7 +6791,7 @@ export interface PartnerProgram {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
-                reusableContent: string | ReusableContent;
+                reusableContent: number | ReusableContent;
                 customId?: string | null;
               };
               id?: string | null;
@@ -6843,15 +6843,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -6860,7 +6860,7 @@ export interface PartnerProgram {
                     }[]
                   | null;
                 assetType?: ('media' | 'code') | null;
-                media?: (string | null) | Media;
+                media?: (number | null) | Media;
                 code?: string | null;
                 mediaWidth?: ('small' | 'medium' | 'large' | 'full') | null;
                 backgroundGlow?: ('none' | 'colorful' | 'white') | null;
@@ -6908,15 +6908,15 @@ export interface PartnerProgram {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                       label: string;
@@ -6955,15 +6955,15 @@ export interface PartnerProgram {
                                             reference?:
                                               | ({
                                                   relationTo: 'pages';
-                                                  value: string | Page;
+                                                  value: number | Page;
                                                 } | null)
                                               | ({
                                                   relationTo: 'posts';
-                                                  value: string | Post;
+                                                  value: number | Post;
                                                 } | null)
                                               | ({
                                                   relationTo: 'case-studies';
-                                                  value: string | CaseStudy;
+                                                  value: number | CaseStudy;
                                                 } | null);
                                             url?: string | null;
                                             label: string;
@@ -7063,8 +7063,8 @@ export interface PartnerProgram {
                                 | {
                                     text: string;
                                     media?: {
-                                      top?: (string | null) | Media;
-                                      bottom?: (string | null) | Media;
+                                      top?: (number | null) | Media;
+                                      bottom?: (number | null) | Media;
                                     };
                                     link?: {
                                       type?: ('reference' | 'custom') | null;
@@ -7072,15 +7072,15 @@ export interface PartnerProgram {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                     };
@@ -7094,15 +7094,15 @@ export interface PartnerProgram {
                                 reference?:
                                   | ({
                                       relationTo: 'pages';
-                                      value: string | Page;
+                                      value: number | Page;
                                     } | null)
                                   | ({
                                       relationTo: 'posts';
-                                      value: string | Post;
+                                      value: number | Post;
                                     } | null)
                                   | ({
                                       relationTo: 'case-studies';
-                                      value: string | CaseStudy;
+                                      value: number | CaseStudy;
                                     } | null);
                                 url?: string | null;
                                 label: string;
@@ -7141,15 +7141,15 @@ export interface PartnerProgram {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                       label: string;
@@ -7182,15 +7182,15 @@ export interface PartnerProgram {
                                             reference?:
                                               | ({
                                                   relationTo: 'pages';
-                                                  value: string | Page;
+                                                  value: number | Page;
                                                 } | null)
                                               | ({
                                                   relationTo: 'posts';
-                                                  value: string | Post;
+                                                  value: number | Post;
                                                 } | null)
                                               | ({
                                                   relationTo: 'case-studies';
-                                                  value: string | CaseStudy;
+                                                  value: number | CaseStudy;
                                                 } | null);
                                             url?: string | null;
                                             label: string;
@@ -7198,7 +7198,7 @@ export interface PartnerProgram {
                                           id?: string | null;
                                         }[]
                                       | null;
-                                    media?: (string | null) | Media;
+                                    media?: (number | null) | Media;
                                     id?: string | null;
                                   }[]
                                 | null;
@@ -7245,15 +7245,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -7286,15 +7286,15 @@ export interface PartnerProgram {
                               reference?:
                                 | ({
                                     relationTo: 'pages';
-                                    value: string | Page;
+                                    value: number | Page;
                                   } | null)
                                 | ({
                                     relationTo: 'posts';
-                                    value: string | Post;
+                                    value: number | Post;
                                   } | null)
                                 | ({
                                     relationTo: 'case-studies';
-                                    value: string | CaseStudy;
+                                    value: number | CaseStudy;
                                   } | null);
                               url?: string | null;
                               label: string;
@@ -7302,7 +7302,7 @@ export interface PartnerProgram {
                             id?: string | null;
                           }[]
                         | null;
-                      media?: (string | null) | Media;
+                      media?: (number | null) | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -7336,12 +7336,12 @@ export interface PartnerProgram {
                   };
                   [k: string]: unknown;
                 };
-                logo: string | Media;
+                logo: number | Media;
                 author?: string | null;
                 role?: string | null;
                 images?:
                   | {
-                      image: string | Media;
+                      image: number | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -7382,15 +7382,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -7404,7 +7404,7 @@ export interface PartnerProgram {
               blockType: 'cta';
             }
           | {
-              cardGridFields: {
+              gridFields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7431,15 +7431,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -7459,15 +7459,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                       };
@@ -7502,7 +7502,7 @@ export interface PartnerProgram {
                         };
                         [k: string]: unknown;
                       };
-                      caseStudy: string | CaseStudy;
+                      caseStudy: number | CaseStudy;
                       id?: string | null;
                     }[]
                   | null;
@@ -7531,7 +7531,7 @@ export interface PartnerProgram {
                   };
                   [k: string]: unknown;
                 };
-                caseStudies: (string | CaseStudy)[];
+                caseStudies: (number | CaseStudy)[];
               };
               id?: string | null;
               blockName?: string | null;
@@ -7546,15 +7546,15 @@ export interface PartnerProgram {
                   | {
                       quote: string;
                       author?: string | null;
-                      logo: string | Media;
+                      logo: number | Media;
                       images?:
                         | {
-                            image: string | Media;
+                            image: number | Media;
                             id?: string | null;
                           }[]
                         | null;
                       tabLabel: string;
-                      caseStudy: string | CaseStudy;
+                      caseStudy: number | CaseStudy;
                       id?: string | null;
                     }[]
                   | null;
@@ -7594,15 +7594,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -7641,15 +7641,15 @@ export interface PartnerProgram {
                               reference?:
                                 | ({
                                     relationTo: 'pages';
-                                    value: string | Page;
+                                    value: number | Page;
                                   } | null)
                                 | ({
                                     relationTo: 'posts';
-                                    value: string | Post;
+                                    value: number | Post;
                                   } | null)
                                 | ({
                                     relationTo: 'case-studies';
-                                    value: string | CaseStudy;
+                                    value: number | CaseStudy;
                                   } | null);
                               url?: string | null;
                               label: string;
@@ -7767,15 +7767,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -7828,7 +7828,7 @@ export interface PartnerProgram {
                   };
                   [k: string]: unknown;
                 };
-                form: string | Form;
+                form: number | Form;
               };
               id?: string | null;
               blockName?: string | null;
@@ -7864,15 +7864,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                       };
@@ -7894,8 +7894,8 @@ export interface PartnerProgram {
                   | {
                       text: string;
                       media?: {
-                        top?: (string | null) | Media;
-                        bottom?: (string | null) | Media;
+                        top?: (number | null) | Media;
+                        bottom?: (number | null) | Media;
                       };
                       link?: {
                         type?: ('reference' | 'custom') | null;
@@ -7903,15 +7903,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                       };
@@ -7925,15 +7925,15 @@ export interface PartnerProgram {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
@@ -7956,15 +7956,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -8004,22 +8004,22 @@ export interface PartnerProgram {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
                 };
                 logos?:
                   | {
-                      logoMedia: string | Media;
+                      logoMedia: number | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -8034,7 +8034,7 @@ export interface PartnerProgram {
                   theme?: ('light' | 'dark') | null;
                 };
                 position?: ('default' | 'wide') | null;
-                media: string | Media;
+                media: number | Media;
                 caption?: {
                   root: {
                     type: string;
@@ -8083,22 +8083,22 @@ export interface PartnerProgram {
                   reference?:
                     | ({
                         relationTo: 'pages';
-                        value: string | Page;
+                        value: number | Page;
                       } | null)
                     | ({
                         relationTo: 'posts';
-                        value: string | Post;
+                        value: number | Post;
                       } | null)
                     | ({
                         relationTo: 'case-studies';
-                        value: string | CaseStudy;
+                        value: number | CaseStudy;
                       } | null);
                   url?: string | null;
                   label: string;
                 };
                 images?:
                   | {
-                      image: string | Media;
+                      image: number | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -8142,20 +8142,20 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
                       };
-                      media: string | Media;
+                      media: number | Media;
                       id?: string | null;
                     }[]
                   | null;
@@ -8184,15 +8184,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -8218,7 +8218,7 @@ export interface PartnerProgram {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
-                reusableContent: string | ReusableContent;
+                reusableContent: number | ReusableContent;
                 customId?: string | null;
               };
               id?: string | null;
@@ -8270,15 +8270,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -8287,7 +8287,7 @@ export interface PartnerProgram {
                     }[]
                   | null;
                 assetType?: ('media' | 'code') | null;
-                media?: (string | null) | Media;
+                media?: (number | null) | Media;
                 code?: string | null;
                 mediaWidth?: ('small' | 'medium' | 'large' | 'full') | null;
                 backgroundGlow?: ('none' | 'colorful' | 'white') | null;
@@ -8335,15 +8335,15 @@ export interface PartnerProgram {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                       label: string;
@@ -8382,15 +8382,15 @@ export interface PartnerProgram {
                                             reference?:
                                               | ({
                                                   relationTo: 'pages';
-                                                  value: string | Page;
+                                                  value: number | Page;
                                                 } | null)
                                               | ({
                                                   relationTo: 'posts';
-                                                  value: string | Post;
+                                                  value: number | Post;
                                                 } | null)
                                               | ({
                                                   relationTo: 'case-studies';
-                                                  value: string | CaseStudy;
+                                                  value: number | CaseStudy;
                                                 } | null);
                                             url?: string | null;
                                             label: string;
@@ -8490,8 +8490,8 @@ export interface PartnerProgram {
                                 | {
                                     text: string;
                                     media?: {
-                                      top?: (string | null) | Media;
-                                      bottom?: (string | null) | Media;
+                                      top?: (number | null) | Media;
+                                      bottom?: (number | null) | Media;
                                     };
                                     link?: {
                                       type?: ('reference' | 'custom') | null;
@@ -8499,15 +8499,15 @@ export interface PartnerProgram {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                     };
@@ -8521,15 +8521,15 @@ export interface PartnerProgram {
                                 reference?:
                                   | ({
                                       relationTo: 'pages';
-                                      value: string | Page;
+                                      value: number | Page;
                                     } | null)
                                   | ({
                                       relationTo: 'posts';
-                                      value: string | Post;
+                                      value: number | Post;
                                     } | null)
                                   | ({
                                       relationTo: 'case-studies';
-                                      value: string | CaseStudy;
+                                      value: number | CaseStudy;
                                     } | null);
                                 url?: string | null;
                                 label: string;
@@ -8568,15 +8568,15 @@ export interface PartnerProgram {
                                       reference?:
                                         | ({
                                             relationTo: 'pages';
-                                            value: string | Page;
+                                            value: number | Page;
                                           } | null)
                                         | ({
                                             relationTo: 'posts';
-                                            value: string | Post;
+                                            value: number | Post;
                                           } | null)
                                         | ({
                                             relationTo: 'case-studies';
-                                            value: string | CaseStudy;
+                                            value: number | CaseStudy;
                                           } | null);
                                       url?: string | null;
                                       label: string;
@@ -8609,15 +8609,15 @@ export interface PartnerProgram {
                                             reference?:
                                               | ({
                                                   relationTo: 'pages';
-                                                  value: string | Page;
+                                                  value: number | Page;
                                                 } | null)
                                               | ({
                                                   relationTo: 'posts';
-                                                  value: string | Post;
+                                                  value: number | Post;
                                                 } | null)
                                               | ({
                                                   relationTo: 'case-studies';
-                                                  value: string | CaseStudy;
+                                                  value: number | CaseStudy;
                                                 } | null);
                                             url?: string | null;
                                             label: string;
@@ -8625,7 +8625,7 @@ export interface PartnerProgram {
                                           id?: string | null;
                                         }[]
                                       | null;
-                                    media?: (string | null) | Media;
+                                    media?: (number | null) | Media;
                                     id?: string | null;
                                   }[]
                                 | null;
@@ -8672,15 +8672,15 @@ export interface PartnerProgram {
                         reference?:
                           | ({
                               relationTo: 'pages';
-                              value: string | Page;
+                              value: number | Page;
                             } | null)
                           | ({
                               relationTo: 'posts';
-                              value: string | Post;
+                              value: number | Post;
                             } | null)
                           | ({
                               relationTo: 'case-studies';
-                              value: string | CaseStudy;
+                              value: number | CaseStudy;
                             } | null);
                         url?: string | null;
                         label: string;
@@ -8713,15 +8713,15 @@ export interface PartnerProgram {
                               reference?:
                                 | ({
                                     relationTo: 'pages';
-                                    value: string | Page;
+                                    value: number | Page;
                                   } | null)
                                 | ({
                                     relationTo: 'posts';
-                                    value: string | Post;
+                                    value: number | Post;
                                   } | null)
                                 | ({
                                     relationTo: 'case-studies';
-                                    value: string | CaseStudy;
+                                    value: number | CaseStudy;
                                   } | null);
                               url?: string | null;
                               label: string;
@@ -8729,7 +8729,7 @@ export interface PartnerProgram {
                             id?: string | null;
                           }[]
                         | null;
-                      media?: (string | null) | Media;
+                      media?: (number | null) | Media;
                       id?: string | null;
                     }[]
                   | null;

@@ -10,7 +10,7 @@ import classes from './index.module.scss'
 export type Settings = Extract<
   Page['layout'][0],
   { blockType: 'cardGrid' }
->['cardGridFields']['settings']
+>['gridFields']['settings']
 
 export type PaddingProps = {
   top?: 'large' | 'small' | 'hero'

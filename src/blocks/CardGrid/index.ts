@@ -9,7 +9,7 @@ export const CardGrid: Block = {
   slug: 'cardGrid',
   fields: [
     blockFields({
-      name: 'cardGridFields',
+      name: 'gridFields', // Shortened from 'cardGridFields'
       fields: [
         richText(),
         linkGroup({

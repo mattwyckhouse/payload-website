@@ -20,7 +20,7 @@ export type CardGridProps = Extract<Page['layout'][0], { blockType: 'cardGrid' }
 
 export const CardGrid: React.FC<CardGridProps> = props => {
   const {
-    cardGridFields: { richText, cards, links, settings, revealDescription },
+    gridFields: { richText, cards, links, settings, revealDescription },
     padding,
     hideBackground,
   } = props
