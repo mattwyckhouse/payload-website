@@ -13,28 +13,28 @@ import { Page } from '@root/payload-types.js'
 
 import classes from './index.module.scss'
 
-type Props = Extract<Page['layout'][0], { blockType: 'caseStudyCards' }> & {
+type Props = Extract<Page['layout'][0], { blockType: 'csCards' }> & {
   padding?: PaddingProps
   hideBackground?: boolean
 }
 
 export const CaseStudyCards: React.FC<Props> = props => {
-  const { caseStudyCardFields, padding, hideBackground } = props
+  const { fields, padding, hideBackground } = props
 
-  if (caseStudyCardFields?.cards && caseStudyCardFields?.cards?.length > 0) {
+  if (fields?.cards && fields?.cards?.length > 0) {
     return (
       <BlockWrapper
         className={classes.caseStudyCards}
-        settings={caseStudyCardFields.settings}
+        settings={fields.settings}
         hideBackground={hideBackground}
         padding={padding}
       >
         <BackgroundGrid />
         <Gutter className={classes.gutter}>
           <BackgroundScanline className={classes.scanline} />
-          {caseStudyCardFields?.cards?.length > 0 && (
+          {fields?.cards?.length > 0 && (
             <div className={classes.cards}>
-              {caseStudyCardFields.cards.map((card, i) => {
+              {fields.cards.map((card, i) => {
                 if (typeof card.caseStudy === 'object' && card.caseStudy !== null) {
                   return (
                     <Link
@@ -45,7 +45,7 @@ export const CaseStudyCards: React.FC<Props> = props => {
                     >
                       <RichText className={classes.content} content={card.richText} />
                       <div className={classes.media}>
-                        {typeof card.caseStudy.featuredImage !== 'string' && (
+                        {typeof card.caseStudy.featuredImage !== 'number' && (
                           <Media resource={card.caseStudy.featuredImage} fill />
                         )}
                       </div>

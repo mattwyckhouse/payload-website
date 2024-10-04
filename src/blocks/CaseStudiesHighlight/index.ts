@@ -4,10 +4,11 @@ import { blockFields } from '../../fields/blockFields'
 import richText from '../../fields/richText'
 
 export const CaseStudiesHighlight: Block = {
-  slug: 'caseStudiesHighlight',
+  slug: 'csHighlight',
+  dbName: 'csH',
   fields: [
     blockFields({
-      name: 'caseStudiesHighlightFields',
+      name: 'fields',
       fields: [
         richText(),
         {

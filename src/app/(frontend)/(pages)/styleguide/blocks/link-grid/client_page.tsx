@@ -7,7 +7,7 @@ import React from 'react'
 
 // const data: LinkGridProps = {
 //   blockType: 'linkGrid',
-//   linkGridFields: {
+//   fields: {
 //     links: [
 //       {
 //         link: {

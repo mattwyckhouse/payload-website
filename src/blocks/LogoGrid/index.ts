@@ -6,9 +6,10 @@ import richText from '../../fields/richText'
 
 export const LogoGrid: Block = {
   slug: 'logoGrid',
+  dbName: 'lgG',
   fields: [
     blockFields({
-      name: 'logoGridFields',
+      name: 'fields',
       fields: [
         richText(),
         {

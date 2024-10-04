@@ -8,6 +8,7 @@ import { StickyHighlights } from '../StickyHighlights'
 
 export const Steps: Block = {
   slug: 'steps',
+  dbName: 'stps',
   labels: {
     singular: 'Steps Block',
     plural: 'Steps Blocks',

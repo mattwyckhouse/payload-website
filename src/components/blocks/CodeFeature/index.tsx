@@ -16,14 +16,14 @@ import { Page } from '@root/payload-types.js'
 
 import classes from './index.module.scss'
 
-type Props = Extract<Page['layout'][0], { blockType: 'codeFeature' }> & {
+type Props = Extract<Page['layout'][0], { blockType: 'codeFt' }> & {
   className?: string
   padding: PaddingProps
   hideBackground?: boolean
 }
 
 export const CodeFeatureComponent: React.FC<Props> = ({
-  codeFeatureFields,
+  fields,
   className,
   padding,
   hideBackground,
@@ -33,7 +33,7 @@ export const CodeFeatureComponent: React.FC<Props> = ({
   const [tabWrapperWidth, setTabWrapperWidth] = useState(0)
   const tabWrapperRef = useRef<HTMLDivElement>(null)
   const activeTabRef = useRef<HTMLButtonElement>(null)
-  const { alignment, heading, richText, codeTabs, links, settings } = codeFeatureFields
+  const { alignment, heading, richText, ct, links, settings } = fields
   const hasLinks = Boolean(links?.length && links.length > 0)
   const id = useId()
   const { data, isOpen } = CodeBlip.useCodeBlip()
@@ -187,15 +187,15 @@ export const CodeFeatureComponent: React.FC<Props> = ({
               <div
                 className={[
                   classes.tabs,
-                  codeTabs?.length && codeTabs.length > 1 && classes.hasMultiple,
+                  ct?.length && ct.length > 1 && classes.hasMultiple,
                 ]
                   .filter(Boolean)
                   .join(' ')}
                 ref={tabWrapperRef}
                 {...(isOpen ? { inert: true } : {})}
               >
-                {codeTabs?.length && codeTabs.length > 1 ? (
-                  codeTabs?.map((code, index) => {
+                {ct?.length && ct.length > 1 ? (
+                  ct?.map((code, index) => {
                     const isActive = activeIndex === index
                     return (
                       <button
@@ -215,13 +215,13 @@ export const CodeFeatureComponent: React.FC<Props> = ({
                   })
                 ) : (
                   <div className={classes.hiddenTab} id={`codefeature${id}-tab-0`}>
-                    {codeTabs?.[0]?.label}
+                    {ct?.[0]?.label}
                   </div>
                 )}
                 <div className={classes.tabIndicator} style={indicatorStyle} aria-hidden={true} />
               </div>
               <div className={classes.codeBlockWrapper} {...(isOpen ? { inert: true } : {})}>
-                {codeTabs?.map((code, index) => {
+                {ct?.map((code, index) => {
                   return (
                     <div
                       key={index}
@@ -242,7 +242,7 @@ export const CodeFeatureComponent: React.FC<Props> = ({
                       <Code
                         parentClassName={classes.parentCodeWrapper}
                         className={classes.code}
-                        codeBlips={code.codeBlips}
+                        codeBlips={code.blips}
                       >{`${code.code}
                   `}</Code>
                     </div>
@@ -315,15 +315,15 @@ export const CodeFeatureComponent: React.FC<Props> = ({
               <div
                 className={[
                   classes.tabs,
-                  codeTabs?.length && codeTabs.length > 1 && classes.hasMultiple,
+                  ct?.length && ct.length > 1 && classes.hasMultiple,
                 ]
                   .filter(Boolean)
                   .join(' ')}
                 ref={tabWrapperRef}
                 {...(isOpen ? { inert: true } : {})}
               >
-                {codeTabs?.length && codeTabs.length > 1 ? (
-                  codeTabs?.map((code, index) => {
+                {ct?.length && ct.length > 1 ? (
+                  ct?.map((code, index) => {
                     const isActive = activeIndex === index
                     return (
                       <button
@@ -343,13 +343,13 @@ export const CodeFeatureComponent: React.FC<Props> = ({
                   })
                 ) : (
                   <div className={classes.hiddenTab} id={`codefeature${id}-tab-0`}>
-                    {codeTabs?.[0]?.label}
+                    {ct?.[0]?.label}
                   </div>
                 )}
                 <div className={classes.tabIndicator} style={indicatorStyle} aria-hidden={true} />
               </div>
               <div className={classes.codeBlockWrapper} {...(isOpen ? { inert: true } : {})}>
-                {codeTabs?.map((code, index) => {
+                {ct?.map((code, index) => {
                   return (
                     <div
                       key={index}
@@ -370,7 +370,7 @@ export const CodeFeatureComponent: React.FC<Props> = ({
                       <Code
                         parentClassName={classes.parentCodeWrapper}
                         className={classes.code}
-                        codeBlips={code.codeBlips}
+                        codeBlips={code.blips}
                       >{`${code.code}
                   `}</Code>
                     </div>

@@ -11,7 +11,7 @@ import React from 'react'
 //     top: 'large',
 //     bottom: 'large',
 //   },
-//   gridFields: {
+//   fields: {
 //     richText: [
 //       {
 //         children: [

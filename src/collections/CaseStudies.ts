@@ -84,7 +84,10 @@ export const CaseStudies: CollectionConfig = {
         Callout,
         CallToAction,
         CardGrid,
-        CaseStudyCards,
+        {
+          ...CaseStudyCards,
+          slug: 'csCards',
+        },
         CaseStudiesHighlight,
         CaseStudyParallax,
         CodeFeature,

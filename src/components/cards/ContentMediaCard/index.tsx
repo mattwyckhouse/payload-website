@@ -11,7 +11,7 @@ export const ContentMediaCard: React.FC<ContentMediaCardProps> = props => {
   const { publishedOn, href, media, title, className, authors } = props
 
   const author = authors?.[0]
-    ? typeof authors?.[0] === 'string'
+    ? typeof authors?.[0] === 'number'
       ? authors[0]
       : authors[0].firstName + ' ' + authors[0].lastName
     : null
@@ -23,7 +23,7 @@ export const ContentMediaCard: React.FC<ContentMediaCardProps> = props => {
       className={[classes.blogCard, className && className].filter(Boolean).join(' ')}
     >
       <div className={[classes.contentWrapper, className && className].filter(Boolean).join(' ')}>
-        {typeof media !== 'string' && (
+        {typeof media !== 'number' && (
           <Media
             resource={media}
             className={classes.media}

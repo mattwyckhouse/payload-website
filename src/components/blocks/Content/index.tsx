@@ -13,8 +13,8 @@ type Props = Extract<Page['layout'][0], { blockType: 'content' }> & {
   hideBackground?: boolean
 }
 
-const Columns: React.FC<Props> = ({ contentFields, padding }) => {
-  const { layout, columnOne, columnTwo, columnThree, settings } = contentFields
+const Columns: React.FC<Props> = ({ fields, padding }) => {
+  const { layout, columnOne, columnTwo, columnThree, settings } = fields
 
   switch (layout) {
     case 'oneColumn': {
@@ -77,7 +77,7 @@ const Columns: React.FC<Props> = ({ contentFields, padding }) => {
 
 export const ContentBlock: React.FC<Props> = props => {
   const {
-    contentFields: { useLeadingHeader, leadingHeader, settings },
+    fields: { useLeadingHeader, leadingHeader, settings },
     padding,
     hideBackground,
   } = props

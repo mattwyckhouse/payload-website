@@ -9,7 +9,7 @@ import { Page } from '@root/payload-types.js'
 import classes from './index.module.scss'
 
 type Props = NonNullable<
-  Extract<Page['layout'][0], { blockType: 'slider' }>['sliderFields']['quoteSlides']
+  Extract<Page['layout'][0], { blockType: 'slider' }>['fields']['quoteSlides']
 >[0] & {
   isActive: boolean
 }

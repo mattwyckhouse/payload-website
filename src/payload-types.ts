@@ -90,7 +90,7 @@ export interface CaseStudy {
   layout?:
     | (
         | {
-            calloutFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -177,7 +177,7 @@ export interface CaseStudy {
             blockType: 'cta';
           }
         | {
-            gridFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -253,7 +253,7 @@ export interface CaseStudy {
             blockType: 'cardGrid';
           }
         | {
-            caseStudyCardFields?: {
+            fields?: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -282,10 +282,10 @@ export interface CaseStudy {
             };
             id?: string | null;
             blockName?: string | null;
-            blockType: 'caseStudyCards';
+            blockType: 'csCards';
           }
         | {
-            caseStudiesHighlightFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -308,10 +308,10 @@ export interface CaseStudy {
             };
             id?: string | null;
             blockName?: string | null;
-            blockType: 'caseStudiesHighlight';
+            blockType: 'csHighlight';
           }
         | {
-            caseStudyParallaxFields?: {
+            fields?: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -334,10 +334,10 @@ export interface CaseStudy {
             };
             id?: string | null;
             blockName?: string | null;
-            blockType: 'caseStudyParallax';
+            blockType: 'csParallax';
           }
         | {
-            codeFeatureFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -383,12 +383,12 @@ export interface CaseStudy {
                     id?: string | null;
                   }[]
                 | null;
-              codeTabs?:
+              ct?:
                 | {
                     language?: ('none' | 'js' | 'ts') | null;
                     label: string;
                     code: string;
-                    codeBlips?:
+                    blips?:
                       | {
                           row: number;
                           label: string;
@@ -436,10 +436,10 @@ export interface CaseStudy {
             };
             id?: string | null;
             blockName?: string | null;
-            blockType: 'codeFeature';
+            blockType: 'codeFt';
           }
         | {
-            contentFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -511,7 +511,7 @@ export interface CaseStudy {
             blockType: 'content';
           }
         | {
-            contentGridFields?: {
+            fields?: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -608,7 +608,7 @@ export interface CaseStudy {
             blockType: 'form';
           }
         | {
-            hoverCardsFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -658,12 +658,12 @@ export interface CaseStudy {
             blockType: 'hoverCards';
           }
         | {
-            hoverHighlightsFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
               beforeHighlights?: string | null;
-              highlights?:
+              hl?:
                 | {
                     text: string;
                     media?: {
@@ -714,10 +714,10 @@ export interface CaseStudy {
             };
             id?: string | null;
             blockName?: string | null;
-            blockType: 'hoverHighlights';
+            blockType: 'hoverHL';
           }
         | {
-            linkGridFields?: {
+            fields?: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -751,7 +751,7 @@ export interface CaseStudy {
             blockType: 'linkGrid';
           }
         | {
-            logoGridFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -802,7 +802,7 @@ export interface CaseStudy {
             blockType: 'logoGrid';
           }
         | {
-            mediaBlockFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -829,7 +829,7 @@ export interface CaseStudy {
             blockType: 'mediaBlock';
           }
         | {
-            mediaContentFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -881,17 +881,17 @@ export interface CaseStudy {
             blockType: 'mediaContent';
           }
         | {
-            mediaContentAccordionFields?: {
+            fields?: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
               alignment?: ('contentMedia' | 'mediaContent') | null;
               leader?: string | null;
               heading?: string | null;
-              accordion?:
+              acc?:
                 | {
-                    position?: ('normal' | 'inset' | 'wide') | null;
-                    background?: ('none' | 'gradient' | 'scanlines') | null;
+                    pos?: ('normal' | 'inset' | 'wide') | null;
+                    bg?: ('none' | 'gradient' | 'scanlines') | null;
                     mediaLabel: string;
                     mediaDescription: {
                       root: {
@@ -935,10 +935,10 @@ export interface CaseStudy {
             };
             id?: string | null;
             blockName?: string | null;
-            blockType: 'mediaContentAccordion';
+            blockType: 'mAccordian';
           }
         | {
-            pricingFields?: {
+            fields?: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -987,7 +987,7 @@ export interface CaseStudy {
             blockType: 'pricing';
           }
         | {
-            reusableContentBlockFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -996,10 +996,10 @@ export interface CaseStudy {
             };
             id?: string | null;
             blockName?: string | null;
-            blockType: 'reusableContentBlock';
+            blockType: 'rcBlock';
           }
         | {
-            sliderFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -1016,7 +1016,7 @@ export interface CaseStudy {
             blockType: 'slider';
           }
         | {
-            statementFields: {
+            fields: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
@@ -1078,7 +1078,7 @@ export interface CaseStudy {
                 layout?:
                   | (
                       | {
-                          codeFeatureFields: {
+                          fields: {
                             settings?: {
                               theme?: ('light' | 'dark') | null;
                             };
@@ -1124,12 +1124,12 @@ export interface CaseStudy {
                                   id?: string | null;
                                 }[]
                               | null;
-                            codeTabs?:
+                            ct?:
                               | {
                                   language?: ('none' | 'js' | 'ts') | null;
                                   label: string;
                                   code: string;
-                                  codeBlips?:
+                                  blips?:
                                     | {
                                         row: number;
                                         label: string;
@@ -1177,10 +1177,10 @@ export interface CaseStudy {
                           };
                           id?: string | null;
                           blockName?: string | null;
-                          blockType: 'codeFeature';
+                          blockType: 'codeFt';
                         }
                       | {
-                          contentFields: {
+                          fields: {
                             settings?: {
                               theme?: ('light' | 'dark') | null;
                             };
@@ -1254,12 +1254,12 @@ export interface CaseStudy {
                           blockType: 'content';
                         }
                       | {
-                          hoverHighlightsFields: {
+                          fields: {
                             settings?: {
                               theme?: ('light' | 'dark') | null;
                             };
                             beforeHighlights?: string | null;
-                            highlights?:
+                            hl?:
                               | {
                                   text: string;
                                   media?: {
@@ -1310,14 +1310,14 @@ export interface CaseStudy {
                           };
                           id?: string | null;
                           blockName?: string | null;
-                          blockType: 'hoverHighlights';
+                          blockType: 'hoverHL';
                         }
                       | {
-                          stickyHighlightsFields?: {
+                          fields?: {
                             settings?: {
                               theme?: ('light' | 'dark') | null;
                             };
-                            highlights?:
+                            hl?:
                               | {
                                   richText: {
                                     root: {
@@ -1356,7 +1356,7 @@ export interface CaseStudy {
                                   };
                                   type?: ('code' | 'media') | null;
                                   code?: string | null;
-                                  codeBlips?:
+                                  blips?:
                                     | {
                                         row: number;
                                         label: string;
@@ -1405,7 +1405,7 @@ export interface CaseStudy {
                           };
                           id?: string | null;
                           blockName?: string | null;
-                          blockType: 'stickyHighlights';
+                          blockType: 'sticky';
                         }
                     )[]
                   | null;
@@ -1417,11 +1417,11 @@ export interface CaseStudy {
             blockType: 'steps';
           }
         | {
-            stickyHighlightsFields?: {
+            fields?: {
               settings?: {
                 theme?: ('light' | 'dark') | null;
               };
-              highlights?:
+              hl?:
                 | {
                     richText: {
                       root: {
@@ -1460,7 +1460,7 @@ export interface CaseStudy {
                     };
                     type?: ('code' | 'media') | null;
                     code?: string | null;
-                    codeBlips?:
+                    blips?:
                       | {
                           row: number;
                           label: string;
@@ -1509,7 +1509,7 @@ export interface CaseStudy {
             };
             id?: string | null;
             blockName?: string | null;
-            blockType: 'stickyHighlights';
+            blockType: 'sticky';
           }
         | ExampleTabsBlock
       )[]
@@ -1822,7 +1822,7 @@ export interface Page {
   };
   layout: (
     | {
-        calloutFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -1909,7 +1909,7 @@ export interface Page {
         blockType: 'cta';
       }
     | {
-        gridFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -1985,7 +1985,7 @@ export interface Page {
         blockType: 'cardGrid';
       }
     | {
-        caseStudyCardFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2014,10 +2014,10 @@ export interface Page {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'caseStudyCards';
+        blockType: 'csCards';
       }
     | {
-        caseStudiesHighlightFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2040,10 +2040,10 @@ export interface Page {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'caseStudiesHighlight';
+        blockType: 'csHighlight';
       }
     | {
-        caseStudyParallaxFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2066,10 +2066,10 @@ export interface Page {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'caseStudyParallax';
+        blockType: 'csParallax';
       }
     | {
-        codeFeatureFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2115,12 +2115,12 @@ export interface Page {
                 id?: string | null;
               }[]
             | null;
-          codeTabs?:
+          ct?:
             | {
                 language?: ('none' | 'js' | 'ts') | null;
                 label: string;
                 code: string;
-                codeBlips?:
+                blips?:
                   | {
                       row: number;
                       label: string;
@@ -2168,10 +2168,10 @@ export interface Page {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'codeFeature';
+        blockType: 'codeFt';
       }
     | {
-        contentFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2243,7 +2243,7 @@ export interface Page {
         blockType: 'content';
       }
     | {
-        contentGridFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2340,7 +2340,7 @@ export interface Page {
         blockType: 'form';
       }
     | {
-        hoverCardsFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2390,12 +2390,12 @@ export interface Page {
         blockType: 'hoverCards';
       }
     | {
-        hoverHighlightsFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
           beforeHighlights?: string | null;
-          highlights?:
+          hl?:
             | {
                 text: string;
                 media?: {
@@ -2446,10 +2446,10 @@ export interface Page {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'hoverHighlights';
+        blockType: 'hoverHL';
       }
     | {
-        linkGridFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2483,7 +2483,7 @@ export interface Page {
         blockType: 'linkGrid';
       }
     | {
-        logoGridFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2534,7 +2534,7 @@ export interface Page {
         blockType: 'logoGrid';
       }
     | {
-        mediaBlockFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2561,7 +2561,7 @@ export interface Page {
         blockType: 'mediaBlock';
       }
     | {
-        mediaContentFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2613,17 +2613,17 @@ export interface Page {
         blockType: 'mediaContent';
       }
     | {
-        mediaContentAccordionFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
           alignment?: ('contentMedia' | 'mediaContent') | null;
           leader?: string | null;
           heading?: string | null;
-          accordion?:
+          acc?:
             | {
-                position?: ('normal' | 'inset' | 'wide') | null;
-                background?: ('none' | 'gradient' | 'scanlines') | null;
+                pos?: ('normal' | 'inset' | 'wide') | null;
+                bg?: ('none' | 'gradient' | 'scanlines') | null;
                 mediaLabel: string;
                 mediaDescription: {
                   root: {
@@ -2667,10 +2667,10 @@ export interface Page {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'mediaContentAccordion';
+        blockType: 'mAccordian';
       }
     | {
-        pricingFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2719,7 +2719,7 @@ export interface Page {
         blockType: 'pricing';
       }
     | {
-        reusableContentBlockFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2728,10 +2728,10 @@ export interface Page {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'reusableContentBlock';
+        blockType: 'rcBlock';
       }
     | {
-        sliderFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2748,7 +2748,7 @@ export interface Page {
         blockType: 'slider';
       }
     | {
-        statementFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -2810,7 +2810,7 @@ export interface Page {
             layout?:
               | (
                   | {
-                      codeFeatureFields: {
+                      fields: {
                         settings?: {
                           theme?: ('light' | 'dark') | null;
                         };
@@ -2856,12 +2856,12 @@ export interface Page {
                               id?: string | null;
                             }[]
                           | null;
-                        codeTabs?:
+                        ct?:
                           | {
                               language?: ('none' | 'js' | 'ts') | null;
                               label: string;
                               code: string;
-                              codeBlips?:
+                              blips?:
                                 | {
                                     row: number;
                                     label: string;
@@ -2909,10 +2909,10 @@ export interface Page {
                       };
                       id?: string | null;
                       blockName?: string | null;
-                      blockType: 'codeFeature';
+                      blockType: 'codeFt';
                     }
                   | {
-                      contentFields: {
+                      fields: {
                         settings?: {
                           theme?: ('light' | 'dark') | null;
                         };
@@ -2986,12 +2986,12 @@ export interface Page {
                       blockType: 'content';
                     }
                   | {
-                      hoverHighlightsFields: {
+                      fields: {
                         settings?: {
                           theme?: ('light' | 'dark') | null;
                         };
                         beforeHighlights?: string | null;
-                        highlights?:
+                        hl?:
                           | {
                               text: string;
                               media?: {
@@ -3042,14 +3042,14 @@ export interface Page {
                       };
                       id?: string | null;
                       blockName?: string | null;
-                      blockType: 'hoverHighlights';
+                      blockType: 'hoverHL';
                     }
                   | {
-                      stickyHighlightsFields?: {
+                      fields?: {
                         settings?: {
                           theme?: ('light' | 'dark') | null;
                         };
-                        highlights?:
+                        hl?:
                           | {
                               richText: {
                                 root: {
@@ -3088,7 +3088,7 @@ export interface Page {
                               };
                               type?: ('code' | 'media') | null;
                               code?: string | null;
-                              codeBlips?:
+                              blips?:
                                 | {
                                     row: number;
                                     label: string;
@@ -3137,7 +3137,7 @@ export interface Page {
                       };
                       id?: string | null;
                       blockName?: string | null;
-                      blockType: 'stickyHighlights';
+                      blockType: 'sticky';
                     }
                 )[]
               | null;
@@ -3149,11 +3149,11 @@ export interface Page {
         blockType: 'steps';
       }
     | {
-        stickyHighlightsFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
-          highlights?:
+          hl?:
             | {
                 richText: {
                   root: {
@@ -3192,7 +3192,7 @@ export interface Page {
                 };
                 type?: ('code' | 'media') | null;
                 code?: string | null;
-                codeBlips?:
+                blips?:
                   | {
                       row: number;
                       label: string;
@@ -3241,7 +3241,7 @@ export interface Page {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'stickyHighlights';
+        blockType: 'sticky';
       }
     | ExampleTabsBlock
   )[];
@@ -3289,7 +3289,7 @@ export interface Post {
   };
   content: (
     | {
-        bannerFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3316,7 +3316,7 @@ export interface Post {
         blockType: 'banner';
       }
     | {
-        blogContentFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3347,7 +3347,7 @@ export interface Post {
           };
           language?: ('none' | 'js' | 'ts') | null;
           code: string;
-          codeBlips?:
+          blips?:
             | {
                 row: number;
                 label: string;
@@ -3395,7 +3395,7 @@ export interface Post {
         blockType: 'code';
       }
     | {
-        blogMarkdownFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3406,7 +3406,7 @@ export interface Post {
         blockType: 'blogMarkdown';
       }
     | {
-        mediaBlockFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3433,7 +3433,7 @@ export interface Post {
         blockType: 'mediaBlock';
       }
     | {
-        reusableContentBlockFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3442,7 +3442,7 @@ export interface Post {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'reusableContentBlock';
+        blockType: 'rcBlock';
       }
   )[];
   lexicalContent?: {
@@ -3482,7 +3482,7 @@ export interface ReusableContent {
   title: string;
   layout: (
     | {
-        bannerFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3509,7 +3509,7 @@ export interface ReusableContent {
         blockType: 'banner';
       }
     | {
-        blogContentFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3534,7 +3534,7 @@ export interface ReusableContent {
         blockType: 'blogContent';
       }
     | {
-        blogMarkdownFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3545,7 +3545,7 @@ export interface ReusableContent {
         blockType: 'blogMarkdown';
       }
     | {
-        calloutFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3632,7 +3632,7 @@ export interface ReusableContent {
         blockType: 'cta';
       }
     | {
-        gridFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3708,7 +3708,7 @@ export interface ReusableContent {
         blockType: 'cardGrid';
       }
     | {
-        caseStudyCardFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3737,10 +3737,10 @@ export interface ReusableContent {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'caseStudyCards';
+        blockType: 'csCards';
       }
     | {
-        caseStudiesHighlightFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3763,10 +3763,10 @@ export interface ReusableContent {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'caseStudiesHighlight';
+        blockType: 'csHighlight';
       }
     | {
-        caseStudyParallaxFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3789,7 +3789,7 @@ export interface ReusableContent {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'caseStudyParallax';
+        blockType: 'csParallax';
       }
     | {
         codeFields: {
@@ -3798,7 +3798,7 @@ export interface ReusableContent {
           };
           language?: ('none' | 'js' | 'ts') | null;
           code: string;
-          codeBlips?:
+          blips?:
             | {
                 row: number;
                 label: string;
@@ -3846,7 +3846,7 @@ export interface ReusableContent {
         blockType: 'code';
       }
     | {
-        codeFeatureFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -3892,12 +3892,12 @@ export interface ReusableContent {
                 id?: string | null;
               }[]
             | null;
-          codeTabs?:
+          ct?:
             | {
                 language?: ('none' | 'js' | 'ts') | null;
                 label: string;
                 code: string;
-                codeBlips?:
+                blips?:
                   | {
                       row: number;
                       label: string;
@@ -3945,10 +3945,10 @@ export interface ReusableContent {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'codeFeature';
+        blockType: 'codeFt';
       }
     | {
-        contentFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4020,7 +4020,7 @@ export interface ReusableContent {
         blockType: 'content';
       }
     | {
-        contentGridFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4118,7 +4118,7 @@ export interface ReusableContent {
         blockType: 'form';
       }
     | {
-        hoverCardsFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4168,12 +4168,12 @@ export interface ReusableContent {
         blockType: 'hoverCards';
       }
     | {
-        hoverHighlightsFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
           beforeHighlights?: string | null;
-          highlights?:
+          hl?:
             | {
                 text: string;
                 media?: {
@@ -4224,10 +4224,10 @@ export interface ReusableContent {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'hoverHighlights';
+        blockType: 'hoverHL';
       }
     | {
-        linkGridFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4261,7 +4261,7 @@ export interface ReusableContent {
         blockType: 'linkGrid';
       }
     | {
-        logoGridFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4312,7 +4312,7 @@ export interface ReusableContent {
         blockType: 'logoGrid';
       }
     | {
-        mediaBlockFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4339,7 +4339,7 @@ export interface ReusableContent {
         blockType: 'mediaBlock';
       }
     | {
-        mediaContentFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4391,17 +4391,17 @@ export interface ReusableContent {
         blockType: 'mediaContent';
       }
     | {
-        mediaContentAccordionFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
           alignment?: ('contentMedia' | 'mediaContent') | null;
           leader?: string | null;
           heading?: string | null;
-          accordion?:
+          acc?:
             | {
-                position?: ('normal' | 'inset' | 'wide') | null;
-                background?: ('none' | 'gradient' | 'scanlines') | null;
+                pos?: ('normal' | 'inset' | 'wide') | null;
+                bg?: ('none' | 'gradient' | 'scanlines') | null;
                 mediaLabel: string;
                 mediaDescription: {
                   root: {
@@ -4445,10 +4445,10 @@ export interface ReusableContent {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'mediaContentAccordion';
+        blockType: 'mAccordian';
       }
     | {
-        pricingFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4497,7 +4497,7 @@ export interface ReusableContent {
         blockType: 'pricing';
       }
     | {
-        sliderFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4514,7 +4514,7 @@ export interface ReusableContent {
         blockType: 'slider';
       }
     | {
-        statementFields: {
+        fields: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
@@ -4576,7 +4576,7 @@ export interface ReusableContent {
             layout?:
               | (
                   | {
-                      codeFeatureFields: {
+                      fields: {
                         settings?: {
                           theme?: ('light' | 'dark') | null;
                         };
@@ -4622,12 +4622,12 @@ export interface ReusableContent {
                               id?: string | null;
                             }[]
                           | null;
-                        codeTabs?:
+                        ct?:
                           | {
                               language?: ('none' | 'js' | 'ts') | null;
                               label: string;
                               code: string;
-                              codeBlips?:
+                              blips?:
                                 | {
                                     row: number;
                                     label: string;
@@ -4675,10 +4675,10 @@ export interface ReusableContent {
                       };
                       id?: string | null;
                       blockName?: string | null;
-                      blockType: 'codeFeature';
+                      blockType: 'codeFt';
                     }
                   | {
-                      contentFields: {
+                      fields: {
                         settings?: {
                           theme?: ('light' | 'dark') | null;
                         };
@@ -4752,12 +4752,12 @@ export interface ReusableContent {
                       blockType: 'content';
                     }
                   | {
-                      hoverHighlightsFields: {
+                      fields: {
                         settings?: {
                           theme?: ('light' | 'dark') | null;
                         };
                         beforeHighlights?: string | null;
-                        highlights?:
+                        hl?:
                           | {
                               text: string;
                               media?: {
@@ -4808,14 +4808,14 @@ export interface ReusableContent {
                       };
                       id?: string | null;
                       blockName?: string | null;
-                      blockType: 'hoverHighlights';
+                      blockType: 'hoverHL';
                     }
                   | {
-                      stickyHighlightsFields?: {
+                      fields?: {
                         settings?: {
                           theme?: ('light' | 'dark') | null;
                         };
-                        highlights?:
+                        hl?:
                           | {
                               richText: {
                                 root: {
@@ -4854,7 +4854,7 @@ export interface ReusableContent {
                               };
                               type?: ('code' | 'media') | null;
                               code?: string | null;
-                              codeBlips?:
+                              blips?:
                                 | {
                                     row: number;
                                     label: string;
@@ -4903,7 +4903,7 @@ export interface ReusableContent {
                       };
                       id?: string | null;
                       blockName?: string | null;
-                      blockType: 'stickyHighlights';
+                      blockType: 'sticky';
                     }
                 )[]
               | null;
@@ -4915,11 +4915,11 @@ export interface ReusableContent {
         blockType: 'steps';
       }
     | {
-        stickyHighlightsFields?: {
+        fields?: {
           settings?: {
             theme?: ('light' | 'dark') | null;
           };
-          highlights?:
+          hl?:
             | {
                 richText: {
                   root: {
@@ -4958,7 +4958,7 @@ export interface ReusableContent {
                 };
                 type?: ('code' | 'media') | null;
                 code?: string | null;
-                codeBlips?:
+                blips?:
                   | {
                       row: number;
                       label: string;
@@ -5007,7 +5007,7 @@ export interface ReusableContent {
         };
         id?: string | null;
         blockName?: string | null;
-        blockType: 'stickyHighlights';
+        blockType: 'sticky';
       }
   )[];
   updatedAt: string;
@@ -5890,7 +5890,7 @@ export interface PartnerProgram {
     beforeDirectory?:
       | (
           | {
-              calloutFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -5977,7 +5977,7 @@ export interface PartnerProgram {
               blockType: 'cta';
             }
           | {
-              gridFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6053,7 +6053,7 @@ export interface PartnerProgram {
               blockType: 'cardGrid';
             }
           | {
-              caseStudyCardFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6082,10 +6082,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'caseStudyCards';
+              blockType: 'csCards';
             }
           | {
-              caseStudiesHighlightFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6108,10 +6108,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'caseStudiesHighlight';
+              blockType: 'csHighlight';
             }
           | {
-              caseStudyParallaxFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6134,10 +6134,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'caseStudyParallax';
+              blockType: 'csParallax';
             }
           | {
-              codeFeatureFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6183,12 +6183,12 @@ export interface PartnerProgram {
                       id?: string | null;
                     }[]
                   | null;
-                codeTabs?:
+                ct?:
                   | {
                       language?: ('none' | 'js' | 'ts') | null;
                       label: string;
                       code: string;
-                      codeBlips?:
+                      blips?:
                         | {
                             row: number;
                             label: string;
@@ -6236,10 +6236,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'codeFeature';
+              blockType: 'codeFt';
             }
           | {
-              contentFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6311,7 +6311,7 @@ export interface PartnerProgram {
               blockType: 'content';
             }
           | {
-              contentGridFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6408,7 +6408,7 @@ export interface PartnerProgram {
               blockType: 'form';
             }
           | {
-              hoverCardsFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6458,12 +6458,12 @@ export interface PartnerProgram {
               blockType: 'hoverCards';
             }
           | {
-              hoverHighlightsFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
                 beforeHighlights?: string | null;
-                highlights?:
+                hl?:
                   | {
                       text: string;
                       media?: {
@@ -6514,10 +6514,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'hoverHighlights';
+              blockType: 'hoverHL';
             }
           | {
-              linkGridFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6551,7 +6551,7 @@ export interface PartnerProgram {
               blockType: 'linkGrid';
             }
           | {
-              logoGridFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6602,7 +6602,7 @@ export interface PartnerProgram {
               blockType: 'logoGrid';
             }
           | {
-              mediaBlockFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6629,7 +6629,7 @@ export interface PartnerProgram {
               blockType: 'mediaBlock';
             }
           | {
-              mediaContentFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6681,17 +6681,17 @@ export interface PartnerProgram {
               blockType: 'mediaContent';
             }
           | {
-              mediaContentAccordionFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
                 alignment?: ('contentMedia' | 'mediaContent') | null;
                 leader?: string | null;
                 heading?: string | null;
-                accordion?:
+                acc?:
                   | {
-                      position?: ('normal' | 'inset' | 'wide') | null;
-                      background?: ('none' | 'gradient' | 'scanlines') | null;
+                      pos?: ('normal' | 'inset' | 'wide') | null;
+                      bg?: ('none' | 'gradient' | 'scanlines') | null;
                       mediaLabel: string;
                       mediaDescription: {
                         root: {
@@ -6735,10 +6735,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'mediaContentAccordion';
+              blockType: 'mAccordian';
             }
           | {
-              pricingFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6787,7 +6787,7 @@ export interface PartnerProgram {
               blockType: 'pricing';
             }
           | {
-              reusableContentBlockFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6796,10 +6796,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'reusableContentBlock';
+              blockType: 'rcBlock';
             }
           | {
-              sliderFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6816,7 +6816,7 @@ export interface PartnerProgram {
               blockType: 'slider';
             }
           | {
-              statementFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -6878,7 +6878,7 @@ export interface PartnerProgram {
                   layout?:
                     | (
                         | {
-                            codeFeatureFields: {
+                            fields: {
                               settings?: {
                                 theme?: ('light' | 'dark') | null;
                               };
@@ -6924,12 +6924,12 @@ export interface PartnerProgram {
                                     id?: string | null;
                                   }[]
                                 | null;
-                              codeTabs?:
+                              ct?:
                                 | {
                                     language?: ('none' | 'js' | 'ts') | null;
                                     label: string;
                                     code: string;
-                                    codeBlips?:
+                                    blips?:
                                       | {
                                           row: number;
                                           label: string;
@@ -6977,10 +6977,10 @@ export interface PartnerProgram {
                             };
                             id?: string | null;
                             blockName?: string | null;
-                            blockType: 'codeFeature';
+                            blockType: 'codeFt';
                           }
                         | {
-                            contentFields: {
+                            fields: {
                               settings?: {
                                 theme?: ('light' | 'dark') | null;
                               };
@@ -7054,12 +7054,12 @@ export interface PartnerProgram {
                             blockType: 'content';
                           }
                         | {
-                            hoverHighlightsFields: {
+                            fields: {
                               settings?: {
                                 theme?: ('light' | 'dark') | null;
                               };
                               beforeHighlights?: string | null;
-                              highlights?:
+                              hl?:
                                 | {
                                     text: string;
                                     media?: {
@@ -7110,14 +7110,14 @@ export interface PartnerProgram {
                             };
                             id?: string | null;
                             blockName?: string | null;
-                            blockType: 'hoverHighlights';
+                            blockType: 'hoverHL';
                           }
                         | {
-                            stickyHighlightsFields?: {
+                            fields?: {
                               settings?: {
                                 theme?: ('light' | 'dark') | null;
                               };
-                              highlights?:
+                              hl?:
                                 | {
                                     richText: {
                                       root: {
@@ -7156,7 +7156,7 @@ export interface PartnerProgram {
                                     };
                                     type?: ('code' | 'media') | null;
                                     code?: string | null;
-                                    codeBlips?:
+                                    blips?:
                                       | {
                                           row: number;
                                           label: string;
@@ -7205,7 +7205,7 @@ export interface PartnerProgram {
                             };
                             id?: string | null;
                             blockName?: string | null;
-                            blockType: 'stickyHighlights';
+                            blockType: 'sticky';
                           }
                       )[]
                     | null;
@@ -7217,11 +7217,11 @@ export interface PartnerProgram {
               blockType: 'steps';
             }
           | {
-              stickyHighlightsFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
-                highlights?:
+                hl?:
                   | {
                       richText: {
                         root: {
@@ -7260,7 +7260,7 @@ export interface PartnerProgram {
                       };
                       type?: ('code' | 'media') | null;
                       code?: string | null;
-                      codeBlips?:
+                      blips?:
                         | {
                             row: number;
                             label: string;
@@ -7309,7 +7309,7 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'stickyHighlights';
+              blockType: 'sticky';
             }
           | ExampleTabsBlock
         )[]
@@ -7317,7 +7317,7 @@ export interface PartnerProgram {
     afterDirectory?:
       | (
           | {
-              calloutFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7404,7 +7404,7 @@ export interface PartnerProgram {
               blockType: 'cta';
             }
           | {
-              gridFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7480,7 +7480,7 @@ export interface PartnerProgram {
               blockType: 'cardGrid';
             }
           | {
-              caseStudyCardFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7509,10 +7509,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'caseStudyCards';
+              blockType: 'csCards';
             }
           | {
-              caseStudiesHighlightFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7535,10 +7535,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'caseStudiesHighlight';
+              blockType: 'csHighlight';
             }
           | {
-              caseStudyParallaxFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7561,10 +7561,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'caseStudyParallax';
+              blockType: 'csParallax';
             }
           | {
-              codeFeatureFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7610,12 +7610,12 @@ export interface PartnerProgram {
                       id?: string | null;
                     }[]
                   | null;
-                codeTabs?:
+                ct?:
                   | {
                       language?: ('none' | 'js' | 'ts') | null;
                       label: string;
                       code: string;
-                      codeBlips?:
+                      blips?:
                         | {
                             row: number;
                             label: string;
@@ -7663,10 +7663,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'codeFeature';
+              blockType: 'codeFt';
             }
           | {
-              contentFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7738,7 +7738,7 @@ export interface PartnerProgram {
               blockType: 'content';
             }
           | {
-              contentGridFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7835,7 +7835,7 @@ export interface PartnerProgram {
               blockType: 'form';
             }
           | {
-              hoverCardsFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7885,12 +7885,12 @@ export interface PartnerProgram {
               blockType: 'hoverCards';
             }
           | {
-              hoverHighlightsFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
                 beforeHighlights?: string | null;
-                highlights?:
+                hl?:
                   | {
                       text: string;
                       media?: {
@@ -7941,10 +7941,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'hoverHighlights';
+              blockType: 'hoverHL';
             }
           | {
-              linkGridFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -7978,7 +7978,7 @@ export interface PartnerProgram {
               blockType: 'linkGrid';
             }
           | {
-              logoGridFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -8029,7 +8029,7 @@ export interface PartnerProgram {
               blockType: 'logoGrid';
             }
           | {
-              mediaBlockFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -8056,7 +8056,7 @@ export interface PartnerProgram {
               blockType: 'mediaBlock';
             }
           | {
-              mediaContentFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -8108,17 +8108,17 @@ export interface PartnerProgram {
               blockType: 'mediaContent';
             }
           | {
-              mediaContentAccordionFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
                 alignment?: ('contentMedia' | 'mediaContent') | null;
                 leader?: string | null;
                 heading?: string | null;
-                accordion?:
+                acc?:
                   | {
-                      position?: ('normal' | 'inset' | 'wide') | null;
-                      background?: ('none' | 'gradient' | 'scanlines') | null;
+                      pos?: ('normal' | 'inset' | 'wide') | null;
+                      bg?: ('none' | 'gradient' | 'scanlines') | null;
                       mediaLabel: string;
                       mediaDescription: {
                         root: {
@@ -8162,10 +8162,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'mediaContentAccordion';
+              blockType: 'mAccordian';
             }
           | {
-              pricingFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -8214,7 +8214,7 @@ export interface PartnerProgram {
               blockType: 'pricing';
             }
           | {
-              reusableContentBlockFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -8223,10 +8223,10 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'reusableContentBlock';
+              blockType: 'rcBlock';
             }
           | {
-              sliderFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -8243,7 +8243,7 @@ export interface PartnerProgram {
               blockType: 'slider';
             }
           | {
-              statementFields: {
+              fields: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
@@ -8305,7 +8305,7 @@ export interface PartnerProgram {
                   layout?:
                     | (
                         | {
-                            codeFeatureFields: {
+                            fields: {
                               settings?: {
                                 theme?: ('light' | 'dark') | null;
                               };
@@ -8351,12 +8351,12 @@ export interface PartnerProgram {
                                     id?: string | null;
                                   }[]
                                 | null;
-                              codeTabs?:
+                              ct?:
                                 | {
                                     language?: ('none' | 'js' | 'ts') | null;
                                     label: string;
                                     code: string;
-                                    codeBlips?:
+                                    blips?:
                                       | {
                                           row: number;
                                           label: string;
@@ -8404,10 +8404,10 @@ export interface PartnerProgram {
                             };
                             id?: string | null;
                             blockName?: string | null;
-                            blockType: 'codeFeature';
+                            blockType: 'codeFt';
                           }
                         | {
-                            contentFields: {
+                            fields: {
                               settings?: {
                                 theme?: ('light' | 'dark') | null;
                               };
@@ -8481,12 +8481,12 @@ export interface PartnerProgram {
                             blockType: 'content';
                           }
                         | {
-                            hoverHighlightsFields: {
+                            fields: {
                               settings?: {
                                 theme?: ('light' | 'dark') | null;
                               };
                               beforeHighlights?: string | null;
-                              highlights?:
+                              hl?:
                                 | {
                                     text: string;
                                     media?: {
@@ -8537,14 +8537,14 @@ export interface PartnerProgram {
                             };
                             id?: string | null;
                             blockName?: string | null;
-                            blockType: 'hoverHighlights';
+                            blockType: 'hoverHL';
                           }
                         | {
-                            stickyHighlightsFields?: {
+                            fields?: {
                               settings?: {
                                 theme?: ('light' | 'dark') | null;
                               };
-                              highlights?:
+                              hl?:
                                 | {
                                     richText: {
                                       root: {
@@ -8583,7 +8583,7 @@ export interface PartnerProgram {
                                     };
                                     type?: ('code' | 'media') | null;
                                     code?: string | null;
-                                    codeBlips?:
+                                    blips?:
                                       | {
                                           row: number;
                                           label: string;
@@ -8632,7 +8632,7 @@ export interface PartnerProgram {
                             };
                             id?: string | null;
                             blockName?: string | null;
-                            blockType: 'stickyHighlights';
+                            blockType: 'sticky';
                           }
                       )[]
                     | null;
@@ -8644,11 +8644,11 @@ export interface PartnerProgram {
               blockType: 'steps';
             }
           | {
-              stickyHighlightsFields?: {
+              fields?: {
                 settings?: {
                   theme?: ('light' | 'dark') | null;
                 };
-                highlights?:
+                hl?:
                   | {
                       richText: {
                         root: {
@@ -8687,7 +8687,7 @@ export interface PartnerProgram {
                       };
                       type?: ('code' | 'media') | null;
                       code?: string | null;
-                      codeBlips?:
+                      blips?:
                         | {
                             row: number;
                             label: string;
@@ -8736,7 +8736,7 @@ export interface PartnerProgram {
               };
               id?: string | null;
               blockName?: string | null;
-              blockType: 'stickyHighlights';
+              blockType: 'sticky';
             }
           | ExampleTabsBlock
         )[]

@@ -6,7 +6,7 @@ import React from 'react'
 // import { StyleguidePageContent } from '../../PageContent/index.js'
 
 // const data: HoverHighlightProps = {
-//   hoverHighlightsFields: {
+//   fields: {
 //     richText: [
 //       {
 //         children: [
@@ -98,13 +98,13 @@ import React from 'react'
 //   },
 //   id: '63669272c67b541ae1680294',
 //   blockName: 'Database, API, Admin UI',
-//   blockType: 'hoverHighlights',
+//   blockType: 'hoverHL',
 // }
 
 // const dataWithoutNumbers = {
 //   ...data,
-//   hoverHighlightsFields: {
-//     ...data.hoverHighlightsFields,
+//   fields: {
+//     ...data.fields,
 //     addRowNumbers: false,
 //   },
 // }

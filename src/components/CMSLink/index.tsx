@@ -10,17 +10,17 @@ const relationSlugs = {
 }
 
 type PageReference = {
-  value: string | Page
+  value: number | Page
   relationTo: 'pages'
 }
 
 type PostsReference = {
-  value: string | Post
+  value: number | Post
   relationTo: 'posts'
 }
 
 type CaseStudyReference = {
-  value: string | CaseStudy
+  value: number | CaseStudy
   relationTo: (typeof relationSlugs)['case_studies']
 }
 
@@ -56,7 +56,7 @@ const generateHref = (args: GenerateSlugType): string => {
     return url
   }
 
-  if (type === 'reference' && reference?.value && typeof reference.value !== 'string') {
+  if (type === 'reference' && reference?.value && typeof reference.value !== 'number') {
     if (reference.relationTo === 'pages') {
       const value = reference.value as Page
       const breadcrumbs = value?.breadcrumbs

@@ -21,8 +21,8 @@ export type Props = Extract<Page['layout'][0], { blockType: 'pricing' }> & {
   hideBackground?: boolean
 }
 
-export const Pricing: React.FC<Props> = ({ pricingFields, padding, hideBackground }) => {
-  const { plans, disclaimer, settings } = pricingFields || {}
+export const Pricing: React.FC<Props> = ({ fields, padding, hideBackground }) => {
+  const { plans, disclaimer, settings } = fields || {}
 
   const [toggledPlan, setToggledPlan] = React.useState('')
   const hasPlans = Array.isArray(plans) && plans.length > 0

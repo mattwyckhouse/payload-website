@@ -37,14 +37,18 @@ export const PayloadRedirects: React.FC<Props> = async ({ disableNotFound, url }
           ? 'case-studies/'
           : ''
       }${document.slug}`
-    } else {
+    } else if (typeof redirectItem.to?.reference?.value === 'object' && redirectItem.to?.reference?.value !== null) {
       redirectUrl = `/${
         redirectItem.to?.reference?.relationTo === 'posts'
           ? 'blog/'
           : redirectItem.to?.reference?.relationTo === 'case-studies'
           ? 'case-studies/'
           : ''
-      }${redirectItem.to?.reference?.value?.slug}`
+      }${redirectItem.to?.reference?.value.slug}`
+    } else {
+      // Handle the case where value is a number or null
+      console.error('Unexpected redirect value type')
+      return null
     }
 
     if (redirectUrl) redirect(redirectUrl)

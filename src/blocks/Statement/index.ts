@@ -6,9 +6,10 @@ import richText from '../../fields/richText'
 
 export const Statement: Block = {
   slug: 'statement',
+  dbName: 'stmt',
   fields: [
     blockFields({
-      name: 'statementFields',
+      name: 'fields',
       fields: [
         richText(),
         linkGroup({

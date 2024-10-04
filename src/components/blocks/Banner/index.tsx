@@ -7,14 +7,14 @@ import { ReusableContent } from '@root/payload-types.js'
 export type BannerBlockProps = Extract<ReusableContent['layout'][0], { blockType: 'banner' }>
 
 export const BannerBlock: React.FC<{
-  bannerFields: BannerBlockProps['bannerFields']
+  fields: BannerBlockProps['fields']
   marginAdjustment?: boolean
   disableGutter?: boolean
-}> = ({ bannerFields, disableGutter, marginAdjustment }) => {
+}> = ({ fields, disableGutter, marginAdjustment }) => {
   const bannerProps: BannerProps = {
-    type: bannerFields.type,
-    content: bannerFields.content,
-    icon: bannerFields.addCheckmark ? 'checkmark' : undefined,
+    type: fields.type,
+    content: fields.content,
+    icon: fields.addCheckmark ? 'checkmark' : undefined,
     marginAdjustment: marginAdjustment,
   }
 

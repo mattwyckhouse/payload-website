@@ -8,7 +8,7 @@ import { Media as MediaType } from '@root/payload-types.js'
 import classes from './index.module.scss'
 
 type ParallaxProps = {
-  media: { image: string | MediaType }[]
+  media: { image: number | MediaType }[]
   className?: string
 } & {
   priority?: MediaProps['priority']
@@ -56,7 +56,7 @@ const MediaParallax: React.FC<ParallaxProps> = ({ media, className, ...mediaProp
                   }),
             }}
           >
-            {typeof image.image !== 'string' && (
+            {typeof image.image !== 'number' && (
               <>
                 <Media resource={image.image} {...mediaProps} />
               </>

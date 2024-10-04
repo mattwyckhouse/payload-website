@@ -15,8 +15,8 @@ export type MediaContentProps = Extract<Page['layout'][0], { blockType: 'mediaCo
   padding: PaddingProps
   hideBackground?: boolean
 }
-export const MediaContentBlock: React.FC<MediaContentProps> = ({ mediaContentFields, padding }) => {
-  const { link, images, richText, alignment, enableLink, settings } = mediaContentFields
+export const MediaContentBlock: React.FC<MediaContentProps> = ({ fields, padding }) => {
+  const { link, images, richText, alignment, enableLink, settings } = fields
 
   return (
     <Gutter>
@@ -88,7 +88,7 @@ export const MediaContentBlock: React.FC<MediaContentProps> = ({ mediaContentFie
 }
 
 export const MediaContent: React.FC<MediaContentProps> = props => {
-  const { settings } = props.mediaContentFields
+  const { settings } = props.fields
 
   return (
     <BlockWrapper padding={props.padding} settings={settings} hideBackground={props.hideBackground}>

@@ -5,6 +5,7 @@ import codeBlips from '../../fields/codeBlips'
 
 export const Code: Block = {
   slug: 'code',
+  dbName: 'code',
   fields: [
     blockFields({
       name: 'codeFields',

@@ -80,7 +80,7 @@ export const BlogPost: React.FC<Post> = props => {
                 )}
               </div>
             </div>
-            {typeof image !== 'string' && (
+            {typeof image !== 'number' && (
               <div
                 className={classes.heroImageWrap}
                 style={{ marginLeft: -(docPadding + 1), marginRight: docPadding * -4 - 6 }}
@@ -88,7 +88,7 @@ export const BlogPost: React.FC<Post> = props => {
                 <Media className={classes.heroImage} resource={image} priority />
               </div>
             )}
-            {typeof image !== 'string' && (
+            {typeof image !== 'number' && (
               <div className={classes.mobileImage}>
                 <Media className={classes.heroImage} resource={image} priority />
               </div>

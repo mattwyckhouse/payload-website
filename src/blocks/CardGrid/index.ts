@@ -7,9 +7,10 @@ import richText from '../../fields/richText'
 
 export const CardGrid: Block = {
   slug: 'cardGrid',
+  dbName: 'cg',
   fields: [
     blockFields({
-      name: 'gridFields', // Shortened from 'cardGridFields'
+      name: 'fields', // Shortened from 'cardfields'
       fields: [
         richText(),
         linkGroup({

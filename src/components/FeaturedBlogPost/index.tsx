@@ -15,7 +15,7 @@ export const FeaturedBlogPost: React.FC<Post> = props => {
   const href = `/blog/${slug}`
 
   const author =
-    typeof authors?.[0] === 'string' ? authors[0] : authors[0].firstName + ' ' + authors[0].lastName
+    typeof authors?.[0] === 'number' ? authors[0] : authors[0].firstName + ' ' + authors[0].lastName
 
   return (
     <Link href={href} prefetch={false} className={classes.wrapper}>
@@ -33,7 +33,7 @@ export const FeaturedBlogPost: React.FC<Post> = props => {
         className={[classes.crosshair, classes.crosshairBottomRight].filter(Boolean).join(' ')}
       />
       <div className={classes.contentWrapper}>
-        {typeof media !== 'string' && <Media resource={media} className={classes.media} />}
+        {typeof media !== 'number' && <Media resource={media} className={classes.media} />}
         <div className={classes.content}>
           <h2 className={classes.title}>{title}</h2>
 

@@ -22,7 +22,7 @@ export type CalloutProps = Extract<Page['layout'][0], { blockType: 'callout' }> 
 
 export const Callout: React.FC<CalloutProps> = props => {
   const {
-    calloutFields: { richText, role, author, logo, images, settings },
+    fields: { richText, role, author, logo, images, settings },
     padding,
     hideBackground,
   } = props
@@ -52,7 +52,7 @@ export const Callout: React.FC<CalloutProps> = props => {
               />
               <div className={[classes.authorWrapper, 'cols-12'].filter(Boolean).join(' ')}>
                 <div className={classes.logo}>
-                  {logo && typeof logo !== 'string' && <Media resource={logo} />}
+                  {logo && typeof logo !== 'number' && <Media resource={logo} />}
                 </div>
                 <div className={classes.author}>
                   <span className={classes.name}>{author}</span>

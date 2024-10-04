@@ -4,14 +4,15 @@ import { blockFields } from '../../fields/blockFields'
 import richText from '../../fields/richText'
 
 export const CaseStudyCards: Block = {
-  slug: 'caseStudyCards',
+  slug: 'csCards',
+  dbName: 'csC',
   labels: {
     singular: 'Case Study Cards',
     plural: 'Case Study Cards',
   },
   fields: [
     blockFields({
-      name: 'caseStudyCardFields',
+      name: 'fields',
       fields: [
         {
           name: 'pixels',

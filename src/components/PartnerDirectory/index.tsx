@@ -13,10 +13,10 @@ import classes from './index.module.scss'
 import { BlockWrapper } from '@components/BlockWrapper'
 
 type FilterablePartner = Omit<Partner, 'industries' | 'specialties' | 'regions' | 'budgets'> & {
-  industries: string[]
-  specialties: string[]
-  regions: string[]
-  budgets: string[]
+  industries: (number | { id: number; value: string })[]
+  specialties: (number | { id: number; value: string })[]
+  regions: (number | { id: number; value: string })[]
+  budgets: (number | { id: number; value: string })[]
 }
 
 export const PartnerDirectory: React.FC<{
@@ -61,16 +61,17 @@ export const PartnerDirectory: React.FC<{
   useEffect(() => {
     setFilteredPartners(
       partnerList.filter(partner => {
+        const matchesFilter = (filterArray: string[], partnerArray: (number | { id: number; value: string })[]) =>
+          filterArray.length === 0 || filterArray.every(filter =>
+            partnerArray.some(item => (typeof item === 'number' ? item.toString() : item.value) === filter)
+          );
+
         return (
-          (filters.industries.length === 0 ||
-            filters.industries.every(industry => partner.industries.includes(industry))) &&
-          (filters.specialties.length === 0 ||
-            filters.specialties.every(specialty => partner.specialties.includes(specialty))) &&
-          (filters.regions.length === 0 ||
-            filters.regions.every(region => partner.regions.includes(region))) &&
-          (filters.budgets.length === 0 ||
-            filters.budgets.every(budget => partner.budgets.includes(budget)))
-        )
+          matchesFilter(filters.industries, partner.industries) &&
+          matchesFilter(filters.specialties, partner.specialties) &&
+          matchesFilter(filters.regions, partner.regions) &&
+          matchesFilter(filters.budgets, partner.budgets)
+        );
       }),
     )
   }, [filters, partnerList])
@@ -89,10 +90,10 @@ export const PartnerDirectory: React.FC<{
     }
 
     filteredPartners.forEach(partner => {
-      filterSet.industries.push(...partner.industries)
-      filterSet.specialties.push(...partner.specialties)
-      filterSet.regions.push(...partner.regions)
-      filterSet.budgets.push(...partner.budgets)
+      filterSet.industries.push(...partner.industries.map(i => typeof i === 'object' ? i.value : String(i)))
+      filterSet.specialties.push(...partner.specialties.map(s => typeof s === 'object' ? s.value : String(s)))
+      filterSet.regions.push(...partner.regions.map(r => typeof r === 'object' ? r.value : String(r)))
+      filterSet.budgets.push(...partner.budgets.map(b => typeof b === 'object' ? b.value : String(b)))
     })
 
     filterSet.industries = Array.from(new Set(filterSet.industries))
@@ -190,7 +191,15 @@ export const PartnerDirectory: React.FC<{
           </div>
         </div>
         <div className="cols-12">
-          <PartnerGrid partners={filteredPartners} />
+          <PartnerGrid
+            partners={filteredPartners.map(partner => ({
+              ...partner,
+              industries: partner.industries.map(i => (typeof i === 'number' ? i : i.id)),
+              specialties: partner.specialties.map(s => (typeof s === 'number' ? s : s.id)),
+              regions: partner.regions.map(r => (typeof r === 'number' ? r : r.id)),
+              budgets: partner.budgets.map(b => (typeof b === 'number' ? b : b.id)),
+            }))}
+          />
         </div>
       </Gutter>
       <BackgroundGrid zIndex={0} />

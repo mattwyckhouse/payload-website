@@ -51,7 +51,7 @@ export const RenderDocs = async ({
     thread =>
       Array.isArray(thread.relatedDocs) &&
       thread.relatedDocs.some(
-        relatedDoc => typeof relatedDoc !== 'string' && relatedDoc.title === currentDoc?.title,
+        relatedDoc => typeof relatedDoc !== 'number' && relatedDoc.title === currentDoc?.title,
       ),
   )
 

@@ -1,8 +1,8 @@
 import type { Page } from '@root/payload-types.js'
 
-type CodeFeatureBlock = Extract<Page['layout'][0], { blockType: 'codeFeature' }>
+type CodeFeatureBlock = Extract<Page['layout'][0], { blockType: 'codeFt' }>
 
-type CodeBlips = NonNullable<CodeFeatureBlock['codeFeatureFields']['codeTabs']>[number]['codeBlips']
+type CodeBlips = NonNullable<CodeFeatureBlock['fields']['ct']>[number]['blips']
 
 export type CodeBlip = NonNullable<CodeBlips>[number]
 

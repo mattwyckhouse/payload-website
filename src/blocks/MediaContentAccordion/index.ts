@@ -6,10 +6,11 @@ import link from '../../fields/link'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export const MediaContentAccordion: Block = {
-  slug: 'mediaContentAccordion',
+  slug: 'mAccordian',
+  dbName: 'mAcc',
   fields: [
     blockFields({
-      name: 'mediaContentAccordionFields',
+      name: 'fields',
       fields: [
         {
           name: 'alignment',
@@ -49,7 +50,7 @@ export const MediaContentAccordion: Block = {
           ],
         },
         {
-          name: 'accordion',
+          name: 'acc',
           type: 'array',
           minRows: 1,
           maxRows: 4,
@@ -58,7 +59,7 @@ export const MediaContentAccordion: Block = {
               type: 'row',
               fields: [
                 {
-                  name: 'position',
+                  name: 'pos',
                   type: 'select',
                   defaultValue: 'normal',
                   options: [
@@ -81,7 +82,7 @@ export const MediaContentAccordion: Block = {
                   },
                 },
                 {
-                  name: 'background',
+                  name: 'bg',
                   type: 'select',
                   defaultValue: 'none',
                   options: [

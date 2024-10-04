@@ -16,7 +16,7 @@ export interface SquareCardProps extends SharedProps {
 }
 
 export interface ContentMediaCardProps extends SharedProps {
-  media: Media | string
+  media: Media | number
   href: string
   publishedOn?: string
   authors: Post['authors']

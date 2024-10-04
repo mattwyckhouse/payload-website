@@ -75,7 +75,7 @@ export const CaseStudy: React.FC<CaseStudyT> = props => {
             )}
           </div>
 
-          {typeof featuredImage !== 'string' && (
+          {typeof featuredImage !== 'number' && (
             <div className={classes.featuredMediaWrap}>
               <Media resource={featuredImage} priority />
             </div>

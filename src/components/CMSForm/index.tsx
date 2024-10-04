@@ -141,7 +141,7 @@ const RenderForm = ({ form, hiddenFields }: { form: FormType; hiddenFields: stri
       {error && <div>{`${error.status || '500'}: ${error.message || ''}`}</div>}
       {!hasSubmitted && (
         <React.Fragment>
-          <Form onSubmit={onSubmit} initialState={initialState} formId={formID}>
+          <Form onSubmit={onSubmit} initialState={initialState} formId={formID.toString()}>
             <div className={classes.formFieldsWrap}>
               {form.fields?.map((field, index) => {
                 const Field: React.FC<any> = fields?.[field.blockType]
@@ -189,12 +189,12 @@ const RenderForm = ({ form, hiddenFields }: { form: FormType; hiddenFields: stri
 }
 
 export const CMSForm: React.FC<{
-  form?: string | FormType | null
+  form?: number | FormType | null
   hiddenFields?: string[]
 }> = props => {
   const { form, hiddenFields } = props
 
-  if (!form || typeof form === 'string') return null
+  if (!form || typeof form === 'number') return null
 
   return <RenderForm form={form} hiddenFields={hiddenFields ?? []} />
 }

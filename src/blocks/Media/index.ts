@@ -5,9 +5,10 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export const MediaBlock: Block = {
   slug: 'mediaBlock',
+  dbName: 'mB',
   fields: [
     blockFields({
-      name: 'mediaBlockFields',
+      name: 'fields',
       fields: [
         {
           name: 'position',

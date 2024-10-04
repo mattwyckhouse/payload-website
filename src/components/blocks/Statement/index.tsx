@@ -19,7 +19,7 @@ export type StatementProps = Extract<Page['layout'][0], { blockType: 'statement'
 
 export const Statement: React.FC<StatementProps> = props => {
   const {
-    statementFields: {
+    fields: {
       richText,
       links,
       assetType,
@@ -80,7 +80,7 @@ export const Statement: React.FC<StatementProps> = props => {
           <div className={[classes.assetWrap, 'grid'].join(' ')}>
             {assetType === 'media'
               ? media &&
-                typeof media !== 'string' && (
+                typeof media !== 'number' && (
                   <div
                     className={[mediaWidthClass, mediaWidth === 'full' && classes.fullMedia]
                       .filter(Boolean)

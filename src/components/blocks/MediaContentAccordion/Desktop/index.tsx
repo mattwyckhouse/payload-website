@@ -22,30 +22,30 @@ import classes from './index.module.scss'
 
 export type MediaContentAccordionProps = Extract<
   Page['layout'][0],
-  { blockType: 'mediaContentAccordion' }
+  { blockType: 'mAccordian' }
 > & {
   className?: string
 }
 
 export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> = ({
-  mediaContentAccordionFields,
+  fields,
   className,
 }) => {
-  const { alignment, leader, heading, accordion } = mediaContentAccordionFields || {}
+  const { alignment, leader, heading, acc } = fields || {}
 
   const mediaRefs = useRef<Array<React.RefObject<HTMLDivElement>>>([])
   const [containerHeight, setContainerHeight] = useState(0)
   const contentRef = useRef<HTMLDivElement | null>(null)
   const [contentWidth, setContentWidth] = useState(0)
-  const hasAccordion = Array.isArray(accordion) && accordion.length > 0
+  const hasAccordion = Array.isArray(acc) && acc.length > 0
   const [activeAccordion, setActiveAccordion] = useState<number>(0)
 
   const toggleAccordion = (index: number) => {
     setActiveAccordion(index)
   }
 
-  if (accordion && accordion.length > 0 && mediaRefs.current.length !== accordion.length) {
-    mediaRefs.current = accordion.map((_, i) => mediaRefs.current[i] || createRef())
+  if (acc && acc.length > 0 && mediaRefs.current.length !== acc.length) {
+    mediaRefs.current = acc.map((_, i) => mediaRefs.current[i] || createRef())
   }
 
   useEffect(() => {
@@ -99,11 +99,11 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
       {alignment === 'mediaContent' ? (
         <Fragment>
           {hasAccordion &&
-            accordion.map((item, index) => (
+            acc.map((item, index) => (
               <Fragment key={item.id || index}>
                 {index === activeAccordion && (
                   <>
-                    {item.background === 'gradient' && (
+                    {item.bg === 'gradient' && (
                       <div
                         className={[
                           classes.gradientDesktopWrapper,
@@ -134,7 +134,7 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
                         />
                       </div>
                     )}
-                    {item.background === 'scanlines' && (
+                    {item.bg === 'scanlines' && (
                       <div
                         className={[
                           classes.scanlineDesktopWrapper,
@@ -161,7 +161,7 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
                         />
                       </div>
                     )}
-                    {item.background === 'none' && (
+                    {item.bg === 'none' && (
                       <div
                         className={[
                           classes.transparentDesktopWrapper,
@@ -180,14 +180,14 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
                   ref={mediaRefs.current[index]}
                   className={[
                     classes.mediaDesktopContainer,
-                    leftPositionClassMap[item.position as keyof typeof leftPositionClassMap],
+                    leftPositionClassMap[item.pos as keyof typeof leftPositionClassMap],
                   ]
                     .filter(Boolean)
                     .join(' ')}
                   style={{
                     opacity: index === activeAccordion ? 1 : 0,
                     width: '100%',
-                    left: item.position === 'wide' ? `calc(-1 * ${contentWidth}px / 2)` : '0px',
+                    left: item.pos === 'wide' ? `calc(-1 * ${contentWidth}px / 2)` : '0px',
                   }}
                 >
                   {typeof item.media === 'object' && item.media !== null && (
@@ -208,7 +208,7 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
             <div>
               <CollapsibleGroup allowMultiple={false} transTime={500} transCurve="ease-in-out">
                 {hasAccordion &&
-                  accordion.map((item, index) => (
+                  acc.map((item, index) => (
                     <div
                       key={item.id || index}
                       className={[
@@ -275,7 +275,7 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
             <div>
               <CollapsibleGroup allowMultiple={false} transTime={500} transCurve="ease-in-out">
                 {hasAccordion &&
-                  accordion.map((item, index) => (
+                  acc.map((item, index) => (
                     <div
                       key={item.id || index}
                       className={[
@@ -328,11 +328,11 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
             </div>
           </div>
           {hasAccordion &&
-            accordion.map((item, index) => (
+            acc.map((item, index) => (
               <Fragment key={item.id || index}>
                 {index === activeAccordion && (
                   <>
-                    {item.background === 'gradient' && (
+                    {item.bg === 'gradient' && (
                       <div
                         className={[
                           classes.gradientDesktopWrapper,
@@ -363,7 +363,7 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
                         />
                       </div>
                     )}
-                    {item.background === 'scanlines' && (
+                    {item.bg === 'scanlines' && (
                       <div
                         className={[
                           classes.scanlineDesktopWrapper,
@@ -390,7 +390,7 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
                         />
                       </div>
                     )}
-                    {item.background === 'none' && (
+                    {item.bg === 'none' && (
                       <div
                         className={[
                           classes.transparentDesktopWrapper,
@@ -409,13 +409,13 @@ export const DesktopMediaContentAccordion: React.FC<MediaContentAccordionProps> 
                   ref={mediaRefs.current[index]}
                   className={[
                     classes.mediaDesktopContainer,
-                    rightPositionClassMap[item.position as keyof typeof rightPositionClassMap],
+                    rightPositionClassMap[item.pos as keyof typeof rightPositionClassMap],
                   ]
                     .filter(Boolean)
                     .join(' ')}
                   style={{
                     opacity: index === activeAccordion ? 1 : 0,
-                    width: item.position === 'wide' ? `calc(100% + ${contentWidth}px / 2)` : '100%',
+                    width: item.pos === 'wide' ? `calc(100% + ${contentWidth}px / 2)` : '100%',
                   }}
                 >
                   {typeof item.media === 'object' && item.media !== null && (

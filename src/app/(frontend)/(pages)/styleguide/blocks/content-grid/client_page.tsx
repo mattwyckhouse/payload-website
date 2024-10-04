@@ -7,7 +7,7 @@ import React from 'react'
 
 // const data: ContentGridProps = {
 //   blockType: 'contentGrid',
-//   contentGridFields: {
+//   contentfields: {
 //     content: [
 //       {
 //         children: [
@@ -56,7 +56,7 @@ import React from 'react'
 //                 },
 //                 layout: [
 //                   {
-//                     contentFields: {
+//                     fields: {
 //                       layout: 'oneColumn',
 //                       columnOne: [
 //                         {
@@ -73,7 +73,7 @@ import React from 'react'
 //                     blockType: 'content',
 //                   },
 //                   {
-//                     contentFields: {
+//                     fields: {
 //                       layout: 'twoColumns',
 //                       columnOne: [
 //                         {
@@ -98,7 +98,7 @@ import React from 'react'
 //                     blockType: 'content',
 //                   },
 //                   {
-//                     contentFields: {
+//                     fields: {
 //                       layout: 'oneColumn',
 //                       columnOne: [
 //                         {
@@ -115,7 +115,7 @@ import React from 'react'
 //                     blockType: 'content',
 //                   },
 //                   {
-//                     sliderFields: {
+//                     fields: {
 //                       sliderType: 'imageSlider',
 //                       imageSlides: [
 //                         {
@@ -251,7 +251,7 @@ import React from 'react'
 //                     },
 //                     layout: [
 //                       {
-//                         contentFields: {
+//                         fields: {
 //                           layout: 'oneColumn',
 //                           columnOne: [
 //                             {
@@ -268,7 +268,7 @@ import React from 'react'
 //                         blockType: 'content',
 //                       },
 //                       {
-//                         contentFields: {
+//                         fields: {
 //                           layout: 'twoColumns',
 //                           columnOne: [
 //                             {
@@ -293,7 +293,7 @@ import React from 'react'
 //                         blockType: 'content',
 //                       },
 //                       {
-//                         contentFields: {
+//                         fields: {
 //                           layout: 'oneColumn',
 //                           columnOne: [
 //                             {
@@ -310,7 +310,7 @@ import React from 'react'
 //                         blockType: 'content',
 //                       },
 //                       {
-//                         sliderFields: {
+//                         fields: {
 //                           sliderType: 'imageSlider',
 //                           imageSlides: [
 //                             {
@@ -577,8 +577,8 @@ import React from 'react'
 
 // const dataWithContainer: ContentGridProps = {
 //   ...data,
-//   contentGridFields: {
-//     ...data.contentGridFields,
+//   contentfields: {
+//     ...data.contentfields,
 //   },
 // }
 

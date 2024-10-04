@@ -16,16 +16,16 @@ type Props = Extract<ReusableContent['layout'][0], { blockType: 'mediaBlock' }> 
 }
 
 export const MediaBlock: React.FC<Props & { disableGutter?: boolean; marginAdjustment?: any }> = ({
-  mediaBlockFields,
+  fields,
   disableGutter,
   marginAdjustment = {},
   padding,
   disableGrid = false,
   hideBackground,
 }) => {
-  const { media, caption, position, settings } = mediaBlockFields
+  const { media, caption, position, settings } = fields
 
-  if (typeof media === 'string') return null
+  if (typeof media === 'number') return null
 
   return (
     <BlockWrapper settings={settings} padding={padding} hideBackground={hideBackground}>

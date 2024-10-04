@@ -6,10 +6,11 @@ import linkGroup from '../../fields/linkGroup'
 import richText from '../../fields/richText'
 
 export const CodeFeature: Block = {
-  slug: 'codeFeature',
+  slug: 'codeFt',
+  dbName: 'cdFt',
   fields: [
     blockFields({
-      name: 'codeFeatureFields',
+      name: 'fields',
       fields: [
         {
           name: 'forceDarkBackground',
@@ -54,7 +55,7 @@ export const CodeFeature: Block = {
           appearances: false,
         }),
         {
-          name: 'codeTabs',
+          name: 'ct',
           type: 'array',
           fields: [
             {

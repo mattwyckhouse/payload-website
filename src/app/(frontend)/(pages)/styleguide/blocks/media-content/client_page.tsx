@@ -11,7 +11,7 @@ import React from 'react'
 //     top: 'large',
 //     bottom: 'large',
 //   },
-//   mediaContentFields: {
+//   fields: {
 //     alignment: 'mediaContent',
 //     richText: [
 //       {
@@ -74,15 +74,15 @@ import React from 'react'
 
 // const dataWithContainer: MediaContentProps = {
 //   ...data,
-//   mediaContentFields: {
-//     ...data.mediaContentFields,
+//   fields: {
+//     ...data.fields,
 //   },
 // }
 
 // const dataContentOnLeft: MediaContentProps = {
 //   ...data,
-//   mediaContentFields: {
-//     ...data.mediaContentFields,
+//   fields: {
+//     ...data.fields,
 //     alignment: 'contentMedia',
 //   },
 // }

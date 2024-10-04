@@ -22,28 +22,28 @@ import classes from './index.module.scss'
 
 export type MediaContentAccordionProps = Extract<
   Page['layout'][0],
-  { blockType: 'mediaContentAccordion' }
+  { blockType: 'mAccordian' }
 > & {
   className?: string
 }
 
 export const MobileMediaContentAccordion: React.FC<MediaContentAccordionProps> = ({
-  mediaContentAccordionFields,
+  fields,
   className,
 }) => {
-  const { leader, heading, accordion } = mediaContentAccordionFields || {}
+  const { leader, heading, acc } = fields || {}
 
   const mediaRefs = useRef<Array<React.RefObject<HTMLDivElement>>>([])
   const [containerHeight, setContainerHeight] = useState(0)
-  const hasAccordion = Array.isArray(accordion) && accordion.length > 0
+  const hasAccordion = Array.isArray(acc) && acc.length > 0
   const [activeAccordion, setActiveAccordion] = useState<number>(0)
 
   const toggleAccordion = (index: number) => {
     setActiveAccordion(index)
   }
 
-  if (accordion && accordion.length > 0 && mediaRefs.current.length !== accordion.length) {
-    mediaRefs.current = accordion.map((_, i) => mediaRefs.current[i] || createRef())
+  if (acc && acc.length > 0 && mediaRefs.current.length !== acc.length) {
+    mediaRefs.current = acc.map((_, i) => mediaRefs.current[i] || createRef())
   }
 
   useEffect(() => {
@@ -86,11 +86,11 @@ export const MobileMediaContentAccordion: React.FC<MediaContentAccordionProps> =
         style={{ height: `calc(${containerHeight}px + 6rem)` }}
       >
         {hasAccordion &&
-          accordion.map((item, index) => (
+          acc.map((item, index) => (
             <Fragment key={item.id || index}>
               {index === activeAccordion && (
                 <>
-                  {item.background === 'gradient' && (
+                  {item.bg === 'gradient' && (
                     <Fragment>
                       <Image
                         alt=""
@@ -113,7 +113,7 @@ export const MobileMediaContentAccordion: React.FC<MediaContentAccordionProps> =
                       />
                     </Fragment>
                   )}
-                  {item.background === 'scanlines' && (
+                  {item.bg === 'scanlines' && (
                     <Fragment>
                       <BackgroundScanline
                         className={[classes.scanlineMobile].filter(Boolean).join(' ')}
@@ -132,14 +132,14 @@ export const MobileMediaContentAccordion: React.FC<MediaContentAccordionProps> =
                       />
                     </Fragment>
                   )}
-                  {item.background === 'none' && <div className={classes.transparentBg} />}
+                  {item.bg === 'none' && <div className={classes.transparentBg} />}
                 </>
               )}
             </Fragment>
           ))}
         <div className={classes.mediaMobileContainer}>
           {hasAccordion &&
-            accordion.map((item, index) => (
+            acc.map((item, index) => (
               <div
                 ref={mediaRefs.current[index]}
                 key={item.id || index}
@@ -156,7 +156,7 @@ export const MobileMediaContentAccordion: React.FC<MediaContentAccordionProps> =
       <div>
         <CollapsibleGroup allowMultiple={false} transTime={500} transCurve="ease-in-out">
           {hasAccordion &&
-            accordion.map((item, index) => (
+            acc.map((item, index) => (
               <div
                 key={item.id || index}
                 className={[

@@ -23,11 +23,11 @@ type Props = Extract<Page['layout'][0], { blockType: 'slider' }> & {
   hideBackground?: boolean
 }
 
-export const SliderBlock: React.FC<Props> = ({ sliderFields, padding, hideBackground }) => {
-  const { settings } = sliderFields
+export const SliderBlock: React.FC<Props> = ({ fields, padding, hideBackground }) => {
+  const { settings } = fields
   const { currentSlideIndex } = useSlider()
 
-  const slides = sliderFields.quoteSlides
+  const slides = fields.quoteSlides
 
   if (!slides || slides.length === 0) return null
 

@@ -13,7 +13,7 @@ const remarkPlugins = [remarkGFM]
 
 type Props = Extract<ReusableContent['layout'][0], { blockType: 'blogMarkdown' }>
 
-const BlogMarkdown: React.FC<Props> = ({ blogMarkdownFields: { markdown } }) => {
+const BlogMarkdown: React.FC<Props> = ({ fields: { markdown } }) => {
   // @ts-expect-error
   return <ReactMarkdown children={markdown} remarkPlugins={remarkPlugins} components={components} />
 }

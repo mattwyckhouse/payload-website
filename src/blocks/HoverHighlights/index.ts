@@ -5,21 +5,22 @@ import link from '../../fields/link'
 import richText from '../../fields/richText'
 
 export const HoverHighlights: Block = {
-  slug: 'hoverHighlights',
+  slug: 'hoverHL',
+  dbName: 'hHL',
   labels: {
     singular: 'Hover Highlights Block',
     plural: 'Hover Highlights Blocks',
   },
   fields: [
     blockFields({
-      name: 'hoverHighlightsFields',
+      name: 'fields',
       fields: [
         {
           name: 'beforeHighlights',
           type: 'textarea',
         },
         {
-          name: 'highlights',
+          name: 'hl',
           type: 'array',
           fields: [
             {

@@ -37,7 +37,7 @@ import { Page, ReusableContent } from '@root/payload-types.js'
 import { useThemePreference } from '@root/providers/Theme/index.js'
 import { Theme } from '@root/providers/Theme/types.js'
 
-type ReusableContentBlockType = Extract<Page['layout'][0], { blockType: 'reusableContentBlock' }>
+type ReusableContentBlockType = Extract<Page['layout'][0], { blockType: 'rcBlock' }>
 
 const blockComponents = {
   banner: BannerBlock,
@@ -103,7 +103,7 @@ export const RenderBlocks: React.FC<Props> = props => {
       'blogContent',
       'blogMarkdown',
       'code',
-      'reusableContentBlock',
+      'rcBlock',
       'caseStudyParallax',
     ],
     [],

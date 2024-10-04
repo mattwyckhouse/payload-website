@@ -7,7 +7,7 @@ import React from 'react'
 
 // const data: BannerBlockProps = {
 //   blockType: 'banner',
-//   bannerFields: {
+//   fields: {
 //     type: 'default',
 //     content: [
 //       {
@@ -24,24 +24,24 @@ import React from 'react'
 
 // const errorState: BannerBlockProps = {
 //   ...data,
-//   bannerFields: {
-//     ...data.bannerFields,
+//   fields: {
+//     ...data.fields,
 //     type: 'error',
 //   },
 // }
 
 // const warningState: BannerBlockProps = {
 //   ...data,
-//   bannerFields: {
-//     ...data.bannerFields,
+//   fields: {
+//     ...data.fields,
 //     type: 'warning',
 //   },
 // }
 
 // const successState: BannerBlockProps = {
 //   ...data,
-//   bannerFields: {
-//     ...data.bannerFields,
+//   fields: {
+//     ...data.fields,
 //     type: 'success',
 //     addCheckmark: true,
 //   },

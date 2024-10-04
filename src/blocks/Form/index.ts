@@ -5,6 +5,7 @@ import richText from '../../fields/richText'
 
 export const Form: Block = {
   slug: 'form',
+  dbName: 'form',
   labels: {
     singular: 'Form Block',
     plural: 'Form Blocks',

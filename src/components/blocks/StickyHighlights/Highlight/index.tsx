@@ -15,11 +15,11 @@ import { Page } from '@root/payload-types.js'
 
 import classes from './index.module.scss'
 
-export type StickyHighlightsProps = Extract<Page['layout'][0], { blockType: 'stickyHighlights' }>
+export type StickyHighlightsProps = Extract<Page['layout'][0], { blockType: 'sticky' }>
 
-type Fields = Exclude<StickyHighlightsProps['stickyHighlightsFields'], undefined>
+type Fields = Exclude<StickyHighlightsProps['fields'], undefined>
 
-type Props = Exclude<Fields['highlights'], undefined | null>[number] & {
+type Props = Exclude<Fields['hl'], undefined | null>[number] & {
   yDirection?: 'up' | 'down'
   midBreak: boolean
 }
@@ -33,7 +33,7 @@ export const StickyHighlightComponent: React.FC<Props> = ({
   media,
   yDirection,
   midBreak,
-  codeBlips,
+  blips,
 }) => {
   const [visible, setVisible] = useState(false)
   const [centerCodeMedia, setCenterCodeMedia] = useState(false)
@@ -166,7 +166,7 @@ export const StickyHighlightComponent: React.FC<Props> = ({
                       <CodeBlip.Modal />
                       <Code
                         parentClassName={classes.code}
-                        codeBlips={codeBlips}
+                        codeBlips={blips}
                         className={classes.innerCode}
                         disableMinHeight
                       >{`${code}

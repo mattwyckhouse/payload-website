@@ -6,13 +6,14 @@ import link from '../../fields/link'
 import richText from '../../fields/richText'
 
 export const StickyHighlights: Block = {
-  slug: 'stickyHighlights',
+  slug: 'sticky', // TODO: rename to stickyHighlights if we find a way around the pgSQL enum length limit
+  dbName: 'stkH',
   fields: [
     blockFields({
-      name: 'stickyHighlightsFields',
+      name: 'fields',
       fields: [
         {
-          name: 'highlights',
+          name: 'hl',
           type: 'array',
           fields: [
             richText(),

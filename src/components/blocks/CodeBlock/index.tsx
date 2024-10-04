@@ -14,7 +14,7 @@ export const CodeBlock: React.FC<
 > = ({ codeFields, disableGutter, disableMinHeight }) => {
   const {
     code,
-    codeBlips,
+    blips,
     // language
   } = codeFields
 
@@ -23,7 +23,7 @@ export const CodeBlock: React.FC<
       <div className={classes.container}>
         <CodeBlip.Modal />
         {disableGutter ? (
-          <Code codeBlips={codeBlips} disableMinHeight>{`${code}`}</Code>
+          <Code codeBlips={blips} disableMinHeight>{`${code}`}</Code>
         ) : (
           <Gutter>
             <div className={'grid'}>
@@ -35,7 +35,7 @@ export const CodeBlock: React.FC<
                   .filter(Boolean)
                   .join(' ')}
               >
-                <Code codeBlips={codeBlips}>{`${code}
+                <Code codeBlips={blips}>{`${code}
           `}</Code>
               </div>
             </div>

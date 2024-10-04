@@ -11,18 +11,18 @@ import classes from './index.module.scss'
 
 export type MediaContentAccordionProps = Extract<
   Page['layout'][0],
-  { blockType: 'mediaContentAccordion' }
+  { blockType: 'mAccordian' }
 > & {
   padding: PaddingProps
   hideBackground?: boolean
 }
 
 export const MediaContentAccordion: React.FC<MediaContentAccordionProps> = ({
-  mediaContentAccordionFields,
+  fields,
   padding,
   hideBackground,
 }) => {
-  const { settings } = mediaContentAccordionFields || {}
+  const { settings } = fields || {}
 
   return (
     <BlockWrapper
@@ -35,13 +35,13 @@ export const MediaContentAccordion: React.FC<MediaContentAccordionProps> = ({
         <BackgroundGrid zIndex={0} />
         <DesktopMediaContentAccordion
           className={classes.desktop}
-          blockType="mediaContentAccordion"
-          mediaContentAccordionFields={mediaContentAccordionFields}
+          blockType="mAccordian"
+          fields={fields}
         />
         <MobileMediaContentAccordion
           className={classes.mobile}
-          blockType="mediaContentAccordion"
-          mediaContentAccordionFields={mediaContentAccordionFields}
+          blockType="mAccordian"
+          fields={fields}
         />
       </Gutter>
     </BlockWrapper>

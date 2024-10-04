@@ -14,7 +14,7 @@ import { useResize } from '@root/utilities/use-resize.js'
 
 import classes from './index.module.scss'
 
-type ContentProps = Extract<Page['layout'][0], { blockType: 'caseStudyParallax' }>
+type ContentProps = Extract<Page['layout'][0], { blockType: 'csParallax' }>
 
 type Props = ContentProps & {
   className?: string
@@ -79,12 +79,12 @@ export const QuoteBlock: React.FC<QuoteProps> = props => {
 }
 
 export const QuoteStickyBlock: React.FC<StickyBlockProps> = props => {
-  const { caseStudyParallaxFields, currentIndex } = props
+  const { fields, currentIndex } = props
 
-  if (caseStudyParallaxFields?.items && caseStudyParallaxFields?.items?.length > 0) {
+  if (fields?.items && fields?.items?.length > 0) {
     return (
       <div className={[classes.stickyBlock, 'grid cols-16 cols-m-8'].filter(Boolean).join(' ')}>
-        {caseStudyParallaxFields?.items.map((item, index) => {
+        {fields?.items.map((item, index) => {
           const isVisible = index === currentIndex
 
           return (
@@ -103,7 +103,7 @@ export const QuoteStickyBlock: React.FC<StickyBlockProps> = props => {
 }
 
 export const CaseStudyParallax: React.FC<Props> = props => {
-  const { caseStudyParallaxFields, padding, hideBackground } = props
+  const { fields, padding, hideBackground } = props
   const activeIndex = React.useRef(0)
   const [scrollProgress, setScrollProgress] = React.useState<number>(0)
   const [delayNavScroll, setDelayNavScroll] = React.useState<boolean>(false)
@@ -231,10 +231,10 @@ export const CaseStudyParallax: React.FC<Props> = props => {
 
   const variableStyle = { '--progress-width': `${scrollProgress}%` } as React.CSSProperties
 
-  if (caseStudyParallaxFields?.items && caseStudyParallaxFields?.items?.length > 0) {
+  if (fields?.items && fields?.items?.length > 0) {
     return (
       <BlockWrapper
-        settings={caseStudyParallaxFields.settings}
+        settings={fields.settings}
         padding={padding}
         hideBackground={hideBackground}
         className={classes.wrapper}
@@ -250,7 +250,7 @@ export const CaseStudyParallax: React.FC<Props> = props => {
           </Gutter>
           <div className={[classes.mainTrack, 'grid'].filter(Boolean).join(' ')} ref={containerRef}>
             <QuoteStickyBlock currentIndex={activeIndex.current} {...props} />
-            {caseStudyParallaxFields?.items.map((item, index) => {
+            {fields?.items.map((item, index) => {
               const isVisible = index === activeIndex.current
               return (
                 <div
@@ -294,7 +294,7 @@ export const CaseStudyParallax: React.FC<Props> = props => {
                   ref={navGridRef}
                 >
                   <div className={[classes.progressIndicator].filter(Boolean).join(' ')} />
-                  {caseStudyParallaxFields?.items.map((item, index) => {
+                  {fields?.items.map((item, index) => {
                     return (
                       <div
                         key={index}

@@ -13,7 +13,7 @@ export const PartnerCard = (partner: PartnerCardProps) => {
   return (
     <Link href={`/partners/${partner.slug}`} className={classes.partnerCard}>
       <div className={classes.partnerCardImage}>
-        {typeof partner.content.bannerImage !== 'string' && (
+        {typeof partner.content.bannerImage !== 'number' && (
           <Media resource={partner.content.bannerImage} />
         )}
       </div>

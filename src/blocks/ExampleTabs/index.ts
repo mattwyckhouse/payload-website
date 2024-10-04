@@ -3,6 +3,7 @@ import type { Block } from 'payload'
 
 const CodeExampleBlock: Block = {
   slug: 'CodeExampleBlock',
+  dbName: 'cdEx',
   interfaceName: 'CodeExampleBlock',
   labels: {
     singular: 'Code Example',
@@ -19,6 +20,7 @@ const CodeExampleBlock: Block = {
 
 const MediaExampleBlock: Block = {
   slug: 'MediaExampleBlock',
+  dbName: 'mEx',
   interfaceName: 'MediaExampleBlock',
   labels: {
     singular: 'Media Example',
@@ -36,6 +38,7 @@ const MediaExampleBlock: Block = {
 
 export const ExampleTabs: Block = {
   slug: 'exampleTabs',
+  dbName: 'exTabs',
   labels: {
     singular: 'Example Tabs',
     plural: 'Example Tabs',

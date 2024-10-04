@@ -5,9 +5,10 @@ import richText from '../../fields/richText'
 
 export const BlogContent: Block = {
   slug: 'blogContent',
+  dbName: 'bc10',
   fields: [
     blockFields({
-      name: 'blogContentFields',
+      name: 'fields',
       fields: [richText()],
     }),
   ],

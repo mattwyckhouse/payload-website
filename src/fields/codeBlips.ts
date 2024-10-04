@@ -4,7 +4,7 @@ import link from './link'
 import richText from './richText'
 
 const codeBlips: ArrayField = {
-  name: 'codeBlips',
+  name: 'blips',
   type: 'array',
   fields: [
     {

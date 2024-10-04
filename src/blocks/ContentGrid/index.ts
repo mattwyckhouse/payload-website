@@ -8,9 +8,10 @@ import richText from '../../fields/richText'
 
 export const ContentGrid: Block = {
   slug: 'contentGrid',
+  dbName: 'cGr',
   fields: [
     blockFields({
-      name: 'contentGridFields',
+      name: 'fields',
       fields: [
         {
           type: 'row',

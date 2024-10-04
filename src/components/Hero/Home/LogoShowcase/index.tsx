@@ -7,7 +7,7 @@ import { Media as MediaType } from '@root/payload-types.js'
 import classes from './index.module.scss'
 
 type LogoItem = {
-  logoMedia: string | MediaType
+  logoMedia: number | MediaType
   id?: string | null
 }
 

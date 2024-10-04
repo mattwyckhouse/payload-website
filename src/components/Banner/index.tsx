@@ -7,11 +7,11 @@ import { RichText } from '../RichText/index.js'
 import classes from './index.module.scss'
 
 export type Props = {
-  type?: Extract<ReusableContent['layout'][0], { blockType: 'banner' }>['bannerFields']['type']
+  type?: Extract<ReusableContent['layout'][0], { blockType: 'banner' }>['fields']['type']
   content?: Extract<
     ReusableContent['layout'][0],
     { blockType: 'banner' }
-  >['bannerFields']['content']
+  >['fields']['content']
   children?: React.ReactNode
   checkmark?: boolean
   icon?: 'checkmark'

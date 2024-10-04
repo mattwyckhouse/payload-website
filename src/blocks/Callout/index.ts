@@ -5,9 +5,10 @@ import richText from '../../fields/richText'
 
 export const Callout: Block = {
   slug: 'callout',
+  dbName: 'callout',
   fields: [
     blockFields({
-      name: 'calloutFields',
+      name: 'fields',
       fields: [
         richText(),
         {

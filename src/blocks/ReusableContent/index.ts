@@ -3,10 +3,11 @@ import type { Block } from 'payload'
 import { blockFields } from '../../fields/blockFields'
 
 export const ReusableContent: Block = {
-  slug: 'reusableContentBlock',
+  slug: 'rcBlock',
+  dbName: 'rcB',
   fields: [
     blockFields({
-      name: 'reusableContentBlockFields',
+      name: 'fields',
       fields: [
         {
           name: 'reusableContent',

@@ -6,9 +6,10 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 export const Banner: Block = {
   slug: 'banner',
+  dbName: 'banner',
   fields: [
     blockFields({
-      name: 'bannerFields',
+      name: 'fields',
       fields: [
         {
           type: 'row',

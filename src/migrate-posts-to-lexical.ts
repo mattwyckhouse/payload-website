@@ -14,7 +14,7 @@ const migratePostsToLexical = async () => {
     let newData: any[] = []
     for (const [index, block] of content.entries()) {
       if (block.blockType === 'blogContent') {
-        newData.push(...block.blogContentFields.richText.root.children)
+        newData.push(...block.fields.richText.root.children)
       } else {
         newData.push({
           format: '',

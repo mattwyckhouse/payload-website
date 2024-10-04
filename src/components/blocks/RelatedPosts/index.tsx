@@ -7,7 +7,7 @@ import classes from './index.module.scss'
 export type RelatedPostsBlock = {
   blockType: 'relatedPosts'
   blockName: string
-  relatedPosts: (Post | string)[] | null
+  relatedPosts: (Post | number)[] | null
   id?: string
   disableGutter?: boolean
 }
@@ -32,7 +32,7 @@ export const RelatedPosts: React.FC<RelatedPostsBlock> = props => {
         <div className={classes.grid}>
           {relatedPosts.map(
             (post, key) =>
-              typeof post !== 'string' && (
+              typeof post !== 'number' && (
                 <ContentMediaCard
                   title={post.title}
                   description={post?.meta?.description}

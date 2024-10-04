@@ -53,7 +53,7 @@ const syncDocs: PayloadHandler = async req => {
       const slug = docFilename.replace('.mdx', '')
 
       const doc: Doc = {
-        id: '',
+        id: 0,
         slug,
         content: parsedDoc.content,
         createdAt: '',

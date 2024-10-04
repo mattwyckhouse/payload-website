@@ -6,6 +6,7 @@ import richText from '../../fields/richText'
 
 export const CallToAction: Block = {
   slug: 'cta',
+  dbName: 'cta',
   labels: {
     singular: 'Call to Action',
     plural: 'Calls to Action',

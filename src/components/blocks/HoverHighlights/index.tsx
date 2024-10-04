@@ -12,14 +12,14 @@ import { Highlights } from './Highlights/index.js'
 
 import classes from './index.module.scss'
 
-export type HoverHighlightProps = Extract<Page['layout'][0], { blockType: 'hoverHighlights' }> & {
+export type HoverHighlightProps = Extract<Page['layout'][0], { blockType: 'hoverHL' }> & {
   hideBackground?: boolean
 }
 
 export const HoverHighlights: React.FC<HoverHighlightProps> = props => {
-  const { hoverHighlightsFields, hideBackground } = props
-  const { settings, beforeHighlights, highlights, afterHighlights, link } =
-    hoverHighlightsFields || {}
+  const { fields, hideBackground } = props
+  const { settings, beforeHighlights, hl, afterHighlights, link } =
+    fields || {}
 
   return (
     <BlockWrapper
@@ -34,9 +34,9 @@ export const HoverHighlights: React.FC<HoverHighlightProps> = props => {
             afterHighlights={afterHighlights}
             button={link}
           >
-            {highlights &&
-              Array.isArray(highlights) && [
-                ...highlights.map((highlight, key) => {
+            {hl &&
+              Array.isArray(hl) && [
+                ...hl.map((highlight, key) => {
                   const { top, bottom } = highlight.media || {}
                   return (
                     <Fragment key={key}>
@@ -45,7 +45,7 @@ export const HoverHighlights: React.FC<HoverHighlightProps> = props => {
                         <ArrowIcon className={classes.arrow} size="large" bold />
                       </CMSLink>
                       <div className={classes.highlightMediaTop}>
-                        {top && typeof top !== 'string' && (
+                        {top && typeof top !== 'number' && (
                           <Media
                             resource={top}
                             className={[classes.media, classes.mediaTop].join(' ')}
@@ -53,7 +53,7 @@ export const HoverHighlights: React.FC<HoverHighlightProps> = props => {
                         )}
                       </div>
                       <div className={classes.highlightMediaBottom}>
-                        {bottom && typeof bottom !== 'string' && (
+                        {bottom && typeof bottom !== 'number' && (
                           <Media
                             resource={bottom}
                             className={[classes.media, classes.mediaBottom].join(' ')}

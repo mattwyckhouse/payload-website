@@ -10,19 +10,19 @@ import { StickyHighlight } from './Highlight/index.js'
 
 import classes from './index.module.scss'
 
-type Props = Extract<Page['layout'][0], { blockType: 'stickyHighlights' }> & {
+type Props = Extract<Page['layout'][0], { blockType: 'sticky' }> & {
   className?: string
   padding: PaddingProps
   hideBackground?: boolean
 }
 
 export const StickyHighlights: React.FC<Props> = ({
-  stickyHighlightsFields,
+  fields,
   className,
   padding,
   hideBackground,
 }) => {
-  const { highlights, settings } = stickyHighlightsFields || {}
+  const { hl, settings } = fields || {}
   const { yDirection } = useScrollInfo()
   const {
     breakpoints: { m },
@@ -40,7 +40,7 @@ export const StickyHighlights: React.FC<Props> = ({
     >
       <Gutter>
         <BackgroundGrid zIndex={0} />
-        {highlights?.map((highlight, i) => {
+        {hl?.map((highlight, i) => {
           return <StickyHighlight yDirection={yDirection} midBreak={m} key={i} {...highlight} />
         })}
       </Gutter>

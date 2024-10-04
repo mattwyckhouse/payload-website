@@ -51,7 +51,7 @@ export default async () => {
           <LinkGrid
             blockType="linkGrid"
             className={classes.linkGrid}
-            linkGridFields={{
+            fields={{
               links:
                 teams?.map((team, index) => {
                   if (!team || typeof team === 'string') return null as any

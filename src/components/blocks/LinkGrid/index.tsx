@@ -18,7 +18,7 @@ export type LinkGridProps = Extract<Page['layout'][0], { blockType: 'linkGrid' }
   hideBackground?: boolean
 }
 
-type Fields = Exclude<LinkGridProps['linkGridFields'], undefined>
+type Fields = Exclude<LinkGridProps['fields'], undefined>
 
 type Props = Exclude<Fields['links'], undefined | null>[number]['link']
 
@@ -35,9 +35,9 @@ export const LinkGrid: React.FC<
     className?: string
   }
 > = props => {
-  const { className, linkGridFields, padding, hideBackground } = props
+  const { className, fields, padding, hideBackground } = props
 
-  const links = linkGridFields?.links
+  const links = fields?.links
   const hasLinks = Array.isArray(links) && links.length > 0
 
   return (
@@ -45,7 +45,7 @@ export const LinkGrid: React.FC<
       className={[className, classes.linkGrid].filter(Boolean).join(' ')}
       padding={padding}
       hideBackground={hideBackground}
-      settings={linkGridFields?.settings}
+      settings={fields?.settings}
     >
       <BackgroundGrid zIndex={0} />
       <Gutter>

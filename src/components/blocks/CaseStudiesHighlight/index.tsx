@@ -12,10 +12,10 @@ import { CaseStudy, ReusableContent } from '@root/payload-types.js'
 
 import classes from './index.module.scss'
 
-type Props = Extract<ReusableContent['layout'][0], { blockType: 'caseStudiesHighlight' }>
+type Props = Extract<ReusableContent['layout'][0], { blockType: 'csHighlight' }>
 
 export const CaseStudiesHighlightBlock: React.FC<Props> = ({
-  caseStudiesHighlightFields: { richText, caseStudies: allCaseStudies },
+  fields: { richText, caseStudies: allCaseStudies },
 }) => {
   const { xPercentage } = useMouseInfo()
 

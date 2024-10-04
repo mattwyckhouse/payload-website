@@ -14,7 +14,7 @@ import { Media as MediaType, Page } from '@root/payload-types.js'
 import classes from './index.module.scss'
 
 type LogoItem = {
-  logoMedia: string | MediaType
+  logoMedia: number | MediaType
   id?: string | null
 }
 
@@ -41,8 +41,8 @@ const getRandomPosition = (excludePositions: number[]) => {
   return newPos
 }
 
-export const LogoGrid: React.FC<LogoGridProps> = ({ logoGridFields, padding, hideBackground }) => {
-  const { richText, enableLink, link, logos, settings } = logoGridFields
+export const LogoGrid: React.FC<LogoGridProps> = ({ fields, padding, hideBackground }) => {
+  const { richText, enableLink, link, logos, settings } = fields
 
   const [logoPositions, setLogoPositions] = useState<PositionedLogo[]>([])
   const [currentAnimatingIndex, setCurrentAnimatingIndex] = useState<number | null>(null)

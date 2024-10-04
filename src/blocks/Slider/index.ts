@@ -5,9 +5,10 @@ import richText from '../../fields/richText'
 
 export const Slider: Block = {
   slug: 'slider',
+  dbName: 'sld',
   fields: [
     blockFields({
-      name: 'sliderFields',
+      name: 'fields',
       fields: [
         {
           type: 'array',

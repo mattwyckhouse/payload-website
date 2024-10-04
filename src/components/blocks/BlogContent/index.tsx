@@ -7,16 +7,16 @@ import { ReusableContent } from '@root/payload-types.js'
 type Props = Extract<ReusableContent['layout'][0], { blockType: 'blogContent' }>
 
 export const BlogContent: React.FC<Props & { disableGutter: boolean }> = ({
-  blogContentFields,
+  fields,
   disableGutter,
 }) => {
   return (
     <>
       {disableGutter ? (
-        <RichText content={blogContentFields.richText} />
+        <RichText content={fields.richText} />
       ) : (
         <Gutter>
-          <RichText content={blogContentFields.richText} />
+          <RichText content={fields.richText} />
         </Gutter>
       )}
     </>

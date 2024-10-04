@@ -3,14 +3,15 @@ import type { Block } from 'payload'
 import { blockFields } from '../../fields/blockFields'
 
 export const CaseStudyParallax: Block = {
-  slug: 'caseStudyParallax',
+  slug: 'csParallax',
+  dbName: 'csP',
   labels: {
     singular: 'Case Study Parallax',
     plural: 'Case Study Parallax',
   },
   fields: [
     blockFields({
-      name: 'caseStudyParallaxFields',
+      name: 'fields',
       fields: [
         {
           name: 'items',

@@ -20,7 +20,7 @@ export type HoverCardsProps = Extract<Page['layout'][0], { blockType: 'hoverCard
 
 const Card: React.FC<{
   leader: number
-  card: NonNullable<HoverCardsProps['hoverCardsFields']['cards']>[number]
+  card: NonNullable<HoverCardsProps['fields']['cards']>[number]
   setHover: Dispatch<SetStateAction<number>>
 }> = ({ card, leader, setHover }) => {
   return (
@@ -43,7 +43,7 @@ const Card: React.FC<{
 
 export const HoverCards: React.FC<HoverCardsProps> = props => {
   const {
-    hoverCardsFields: { richText, cards, settings },
+    fields: { richText, cards, settings },
     padding,
     hideBackground,
   } = props
